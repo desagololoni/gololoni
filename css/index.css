@@ -1,47 +1,46 @@
 /* ---[[ 1. THEME & FONT VARIABLES ]] --- */
 :root {
     --primary: #4a7c44;
-    --primary-hover: #5d9657;
+    --primary-hover: #2c4629;
     --primary-light: #6bb05f;
 
-    /* Secondary: Vibrant Coral Red - Warm and inviting for tourism */
     --secondary: #C21010;
-    --secondary-hover: #990000;
-    --secondary-light: #EB5353;
+    --secondary-hover: #7a0000;
+    --secondary-light: #e91f1f;
 
     --text-color: #1a1a1a;
     --text-secondary: #2c2c2c;
-
     --bg-surface: #f5f5f5;
     --bg-box: #ffffff;
     --bg-card: #fafafa;
     --border-color: #e0e0e0;
     --shadow-color: rgba(0, 0, 0, 0.1);
+
     font-size: 14px;
     --fontXS: clamp(0.75rem, 1vw + 0.5rem, 0.875rem);
-    /* setara 12px - 14px */
     --fontS: clamp(0.875rem, 1.5vw + 0.5rem, 1rem);
-    /* setara 14px - 16px */
     --fontM: clamp(1rem, 2vw + 0.5rem, 1.25rem);
-    /* setara 16px - 20px */
     --fontL: clamp(1.25rem, 3vw + 0.5rem, 1.5rem);
-    /* setara 20px - 28px */
     --fontXL: clamp(1.5rem, 5vw + 0.5rem, 1.75rem);
-    /* tengahnya L dan XXL */
     --fontXXL: clamp(1.75rem, 5vw + 0.5rem, 3rem);
-    /* setara 28px - 48px */
 }
 
 body.dark-mode {
-    --primary: #4a6cf7;
-    --primary-hover: #6a85f8;
-    --text-color: #ffffff;
-    --text-secondary: #e0e0e0;
-    --bg-surface: #16174b;
-    --bg-box: #1a1b4f;
-    --bg-card: #1e1f54;
-    --border-color: #2a2b5e;
-    --shadow-color: rgba(0, 0, 0, 0.2);
+    --primary: #6bb05f;
+    --primary-hover: #88c57f;
+    --primary-light: #9ed896;
+
+    --secondary: #e91f1f;
+    --secondary-hover: #ff4444;
+    --secondary-light: #ff6b6b;
+    
+    --text-color: #e8e8e8;
+    --text-secondary: #b8b8b8;
+    --bg-surface: #0f0f0f;
+    --bg-box: #2f3436;
+    --bg-card: #252525;
+    --border-color: #2d2d2d;
+    --shadow-color: rgba(0, 0, 0, 0.4);
 }
 
 /* ---[[ 2. BASE & RESET STYLES ]] --- */
@@ -58,6 +57,7 @@ body {
     background-color: var(--bg-surface);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
 }
 
 .web-margin {
@@ -81,7 +81,7 @@ a {
 
 /* ---[[ 3. NAVBAR CORE STRUCTURE ]] --- */
 .navbar {
-    background: var(--bg-box);
+    background: var(--primary);
     box-shadow: 0 2px 10px var(--shadow-color);
     position: sticky;
     top: 0;

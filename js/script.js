@@ -391,14 +391,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const allSlides = Array.from(sliderTrack.children);
     const nextButton = document.querySelector('.next-btn');
     const prevButton = document.querySelector('.prev-btn');
-    
+
     // --- State ---
     let currentIndex = 0;
     let slidesPerView = getSlidesPerView();
     let visibleSlides = [...allSlides];
 
     // --- Functions ---
-    
+
     function getSlidesPerView() {
         const windowWidth = window.innerWidth;
         if (windowWidth > 1024) return 4;
@@ -420,7 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Update the array of visible slides
         visibleSlides = allSlides.filter(slide => !slide.classList.contains('hidden'));
-        
+
         // Reset the slider to the beginning
         currentIndex = 0;
         updateSliderPosition();
@@ -437,7 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const slideWidth = visibleSlides[0].getBoundingClientRect().width;
         const gap = parseInt(window.getComputedStyle(sliderTrack).gap);
         const totalSlideWidth = slideWidth + gap;
-        
+
         let offset = 0;
         if (slidesPerView === 1 && window.innerWidth <= 480) {
             const containerWidth = document.querySelector('.slider-container').offsetWidth;
@@ -474,7 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
             updateSliderPosition();
         }
     }
-    
+
     function handleResize() {
         const newSlidesPerView = getSlidesPerView();
         if (slidesPerView !== newSlidesPerView) {
@@ -505,7 +505,15 @@ document.addEventListener('DOMContentLoaded', () => {
     nextButton.addEventListener('click', moveToNextSlide);
     prevButton.addEventListener('click', moveToPrevSlide);
     window.addEventListener('resize', handleResize);
-    
+
     // --- Initial Setup ---
     updateSliderPosition();
 });
+// --- Offset fix ---
+let offset = 0;
+if (slidesPerView === 1 && window.innerWidth <= 480) {
+    const containerWidth = document.querySelector('.slider-container').offsetWidth;
+    const slideWidth = visibleSlides[0].getBoundingClientRect().width;
+    offset = (containerWidth - slideWidth) / 2; // This correctly calculates the centering space
+}
+sliderTrack.style.transform = `translateX(${-(currentIndex * totalSlideWidth) + offset}px)`;
