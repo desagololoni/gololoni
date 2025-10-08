@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/attraction.css">
+    <link rel="stylesheet" href="css/paket.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <section class="homepage" id="home">
+        <div class="bg-slider" id="bgSlider"></div>
+        <div class="bg-overlay"></div>
+
+        <main class="main-content">
+            <section class="hero-section">
+                <h1 class="headline">
+                    <span>Desa Golo Loni</span>
+                </h1>
+                <p class="description">
+                    Selamat Datang di Desa Wisata Terbaik NTT<br><span>Back To Nature</span>
+                </p>
+                <div class="cta-container">
+                    <button class="cta-button" onclick="handleCTAClick()">
+                        LIHAT ATRAKSI
+                    </button>
+                    <a href="#packages" class="cta-link">LIHAT PAKET</a>
+                </div>
+            </section>
+        </main>
+
+        <div class="slider-controls left">
+            <div class="slider-preview" id="prevPreview">
+                <div class="preview-label">Sebelumnya</div>
+            </div>
+        </div>
+        <div class="slider-controls right">
+            <div class="slider-preview" id="nextPreview">
+                <div class="preview-label">Selanjutnya</div>
+            </div>
+        </div>
+    </section>
+    <div class="web-margin">
+        <section class="about" id="about">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>Tentang Desa Golo Loni</h2>
+                    <p>
+                        Desa Golo Loni terletak di Kecamatan <span class="about-span">Rana Mese</span> Kabupaten
+                        Manggarai Timur Provinsi Nusa Tenggara Timur, <span class="about-span">Indonesia</span>. Desa
+                        ini berada dekat dengan pusat kota Ruteng.
+                        <br>
+                        <br>
+                        Desa yang mana dikelilingi persawahan, hutan rimbun dan bukit. Desa Golo Loni memiliki icon
+                        wisata yakni Danau Rana Mese.
+                        <br>
+                        <br>
+                        Banyak juga kegiatan rekreasi <span class="about-span">AGROWISATA</span> yang dapat dilakukan
+                        pada desa wisata ini, beberapa yang terkenal yakni, river Tubing, Flying Fox, dan Memancing.
+                        Temukan kegiatan lainnya yang menarik di Desa Golo Loni pada website ini.
+                    </p>
+                </div>
+                <div class="about-video">
+                    <video controls>
+                        <source src="media/vid/DESA WISATA GOLO LONI.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+        <section class="attraction" id="attraction">
+            <div class="header">
+                <h2>Attraction</h2>
+                <p>Lihat atraksi Di SIni Atraksi yey yey</p>
+            </div>
+            <div class="attraction-grid">
+                <div class="AttractionGallery" id="AttractionGallery"></div>
+            </div>
+        </section>
+        <section class="paket" id="paket">
+            <div class="header">
+                <h2>Paket Wisata</h2>
+                <p>Lihat paket yang sudah ada dibuat yeyey</p>
+            </div>
+            <div class="packages-grid">
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h2 class="plan-title">Paket ½ Day</h2>
+                        <p class="plan-duration">Pulang hari</p>
+                    </div>
+                    <div class="price-section">
+                        <div class="price-main">
+                            <span class="price-currency">Rp</span>
+                            <span class="price-amount">500.000</span>
+                        </div>
+                        <div class="price-per">Per Pax</div>
+                    </div>
+                    <button class="details-button" data-package="halfDay">
+                        Lihat Paket
+                    </button>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h2 class="plan-title">Paket Camping</h2>
+                        <p class="plan-duration">2 Hari, 1 Malam</p>
+                    </div>
+                    <div class="price-section">
+                        <div class="price-main">
+                            <span class="price-currency">Rp</span>
+                            <span class="price-amount">2.000.000</span>
+                        </div>
+                        <div class="price-per">Per Pax</div>
+                    </div>
+                    <button class="details-button" data-package="camping">
+                        Lihat Paket
+                    </button>
+                </div>
+
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h2 class="plan-title">Paket 2 Day</h2>
+                        <p class="plan-duration">3 Hari, 2 Malam</p>
+                    </div>
+                    <div class="price-section">
+                        <div class="price-main">
+                            <span class="price-currency">Rp</span>
+                            <span class="price-amount">3.500.000</span>
+                        </div>
+                        <div class="price-per">Per Pax</div>
+                    </div>
+                    <button class="details-button" data-package="twoDay">
+                        Lihat Paket
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal-overlay" id="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title" id="modalTitleContainer">
+                        </div>
+                        <button class="close-button" id="closeModalButton">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="activity-list" id="activityList">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="amenities-section">
+                <div class="amenities-text">
+                    <h3>Fasilitas & Amenitas</h3>
+                    <p>Temukan berbagai fasilitas dan amenitas yang tersedia untuk kenyamanan anda selama berwisata di
+                        Desa Golo Loni</p>
+                </div>
+                <a href="amenitas.html" class="amenities-button">Lihat Fasilitas</a>
+            </div>
+        </section>
+        <section class="product-slider-section">
+            <div class="container">
+                <h2 class="section-title">Produk Lokal Kami</h2>
+
+                <div class="filter-controls">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="food">Food</button>
+                    <button class="filter-btn" data-filter="drink">Drinks</button>
+                    <button class="filter-btn" data-filter="art">Art/Craft</button>
+                </div>
+
+                <div class="slider-wrapper">
+                    <button class="slider-btn prev-btn" aria-label="Previous slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                        </svg>
+                    </button>
+
+                    <div class="slider-container">
+                        <div class="slider-track">
+                            <article class="product-card" data-category="drink">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1551030173-1929ba646353?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEyfHxzbW9vdGhpZXxlbnwwfHx8fDE2NjY4OTAwMDA&ixlib=rb-4.0.3&q=80&w=400"
+                                        alt="Berry Smoothie">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Sunset Berry Smoothie</h3>
+                                    <p class="product-description">A refreshing blend of strawberries, blueberries, and
+                                        a hint of mango.</p>
+                                </div>
+                            </article>
+
+                            <article class="product-card" data-category="food">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEwfHxwaXp6YXxlbnwwfHx8fDE2NjY4OTAwMDA&ixlib=rb-4.0.3&q=80&w=400"
+                                        alt="Gourmet Pizza">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Gourmet Margherita</h3>
+                                    <p class="product-description">Classic pizza with fresh mozzarella, basil, and a
+                                        rich tomato sauce.</p>
+                                </div>
+                            </article>
+
+                            <article class="product-card" data-category="art">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1547891654-e66ed711b934?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEwfHxwYWludGluZ3xlbnwwfHx8fDE2NjY4OTAwMDA&ixlib=rb-4.0.3&q=80&w=400"
+                                        alt="Abstract Painting">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Abstract Canvas</h3>
+                                    <p class="product-description">A vibrant, hand-painted piece to bring color to any
+                                        room.</p>
+                                </div>
+                            </article>
+
+                            <article class="product-card" data-category="food">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1484723050470-65e94b6d4371?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEwfHxidXJnZXJ8ZW58MHx8fHwxNjY2ODkwMDAw&ixlib=rb-4.0.3&q=80&w=400"
+                                        alt="Gourmet Burger">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">The Ultimate Burger</h3>
+                                    <p class="product-description">Juicy beef patty with aged cheddar, crispy bacon, and
+                                        our secret sauce.</p>
+                                </div>
+                            </article>
+
+                            <article class="product-card" data-category="drink">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1514362545857-3bc7dca47259?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEwfHxjb2NrdGFpbHxlbnwwfHx8fDE2NjY4OTAwMDA&ixlib=rb-4.0.3&q=80&w=400"
+                                        alt="Craft Cocktail">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Citrus Burst Cocktail</h3>
+                                    <p class="product-description">A zesty and invigorating cocktail made with premium
+                                        gin and fresh citrus.</p>
+                                </div>
+                            </article>
+
+                            <article class="product-card" data-category="art">
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIyfHxwYWludGluZ3xlbnwwfHx8fDE2NjY4OTAwMDA&ixlib=rb-4.0.3&q=80&w=400"
+                                        alt="Colorful Art">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Cosmic Dreams</h3>
+                                    <p class="product-description">An exploration of color and texture on a medium
+                                        canvas. One of a kind.</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <button class="slider-btn next-btn" aria-label="Next slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

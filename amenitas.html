@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amenitas - Bagian Destinasi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/script.js"></script>
+    <style>
+        /* CSS Root Variables & Base Styles */
+        :root {
+            --primary: #4a7c44;
+            --primary-hover: #5d9657;
+            --primary-light: #6bb05f;
+            --secondary: #C21010;
+            --secondary-hover: #990000;
+            --secondary-light: #EB5353;
+            --text-color: #1a1a1a;
+            --text-secondary: #2c2c2c;
+            --bg-surface: #f5f5f5;
+            --bg-box: #ffffff;
+            --bg-card: #fafafa;
+            --border-color: #e0e0e0;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+            --fontXS: clamp(0.75rem, 1vw + 0.5rem, 0.875rem);
+            --fontS: clamp(0.875rem, 1.5vw + 0.5rem, 1rem);
+            --fontM: clamp(1rem, 2vw + 0.5rem, 1.25rem);
+            --fontL: clamp(1.25rem, 3vw + 0.5rem, 1.5rem);
+            --fontXL: clamp(1.5rem, 5vw + 0.5rem, 1.75rem);
+            --fontXXL: clamp(1.75rem, 5vw + 0.5rem, 3rem);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-surface);
+            margin: 0;
+            /* Padding moved from body to the main content section */
+        }
+        
+        main {
+            padding: 1rem;
+        }
+        @media (min-width: 768px) {
+            main { padding: 2rem; }
+        }
+        @media (min-width: 1024px) {
+            main { padding: 3rem; }
+        }
+
+        /* Responsive Typography */
+        .text-xxl { font-size: var(--fontXXL); }
+        .text-xl { font-size: var(--fontXL); }
+        .text-l { font-size: var(--fontL); }
+        .text-m { font-size: var(--fontM); }
+        .text-s { font-size: var(--fontS); }
+        
+        /* General Layout & Section Styling */
+        .amenitas-section {
+            max-width: 80rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .amenitas-subsection {
+            margin-bottom: 4rem;
+        }
+
+        .section-heading {
+            font-size: var(--fontXXL);
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            text-align: center;
+            border-bottom: 4px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+
+        .subsection-heading {
+            font-size: var(--fontXL);
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--secondary);
+            padding-left: 0.75rem;
+        }
+        
+        /* Accommodation Card */
+        .accommodation-card {
+            background-color: var(--bg-box);
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color);
+            overflow: hidden;
+        }
+
+        .accommodation-card-image {
+            position: relative;
+        }
+        
+        .accommodation-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .accommodation-card-title-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 1rem;
+            background-color: rgba(0, 0, 0, 0.4);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .accommodation-card-title-overlay h3 {
+            font-size: var(--fontL);
+            font-weight: 600;
+            color: white;
+            margin: 0;
+        }
+
+        .accommodation-card-details {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .accommodation-card .description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            font-size: var(--fontS);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            font-size: var(--fontS);
+        }
+        
+        .feature-item i {
+            font-size: 1.1rem;
+            width: 1.25rem;
+            text-align: center;
+            color: var(--primary);
+            margin-right: 0.5rem;
+        }
+
+        .feature-item span {
+            font-weight: 500;
+        }
+
+        .availability-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: var(--fontS);
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+        }
+
+        .availability-info p {
+            margin: 0;
+            font-weight: 600;
+        }
+        
+        .availability-info span {
+            color: var(--primary);
+        }
+
+        .price-block {
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-block .price-value {
+            font-size: var(--fontXXL);
+            font-weight: 700;
+            color: var(--secondary);
+            line-height: 1;
+        }
+        .price-block .price-value p {
+            margin: 0;
+        }
+
+        .price-block .price-unit {
+            font-size: var(--fontM);
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
+        .cta-button {
+            background-color: var(--secondary);
+            color: white;
+            font-size: var(--fontS);
+            font-weight: 700;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+        }
+        
+        .cta-button:hover {
+            background-color: var(--secondary-hover);
+        }
+
+        /* Facilities Section */
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .facility-item {
+            background-color: var(--bg-card);
+            padding: 1.25rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .facility-item:hover {
+            transform: scale(1.02);
+        }
+
+        .facility-item i {
+            font-size: 2rem;
+            width: 2rem;
+            height: 2rem;
+            line-height: 2rem;
+            color: var(--secondary);
+            margin-bottom: 0.75rem;
+        }
+        
+        .facility-item p {
+            margin: 0;
+            font-size: var(--fontS);
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        /* Transportation & Culinary Section */
+        .content-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .content-card {
+            background-color: var(--bg-box);
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color);
+            overflow: hidden;
+        }
+        
+        .content-card img {
+            width: 100%;
+            height: 12rem;
+            object-fit: cover;
+        }
+
+        .content-card-body {
+            padding: 1.25rem;
+        }
+
+        .content-card h3 {
+            font-size: var(--fontL);
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        
+        .content-card p {
+            font-size: var(--fontS);
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        .content-card-button {
+            background: none;
+            border: none;
+            padding: 0;
+            margin-top: 1rem;
+            font-size: var(--fontS);
+            color: var(--secondary);
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .content-card-button:hover {
+            color: var(--secondary-hover);
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (min-width: 768px) {
+            .subsection-heading {
+                margin-bottom: 2rem;
+            }
+            .accommodation-card {
+                display: flex;
+                height: 24rem;
+            }
+            .accommodation-card-image,
+            .accommodation-card-details {
+                width: 50%;
+            }
+            .accommodation-card-details {
+                padding: 2rem;
+            }
+            .facilities-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            .content-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .facilities-grid {
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <section id="amenitas" class="amenitas-section">
+            <h1 class="section-heading">Amenitas Destinasi</h1>
+
+            <div id="akomodasi" class="amenitas-subsection">
+                <h2 class="subsection-heading">Akomodasi Unggulan</h2>
+                
+                <div class="accommodation-card">
+                    <div class="accommodation-card-image">
+                        <img src="https://placehold.co/800x600/6bb05f/ffffff?text=Vila+Hijau" alt="Vila Hijau Asri">
+                        <div class="accommodation-card-title-overlay">
+                            <h3>Vila Hijau Asri</h3>
+                        </div>
+                    </div>
+
+                    <div class="accommodation-card-details">
+                        <div>
+                            <p class="description">Unit yang nyaman dengan pemandangan pegunungan yang menenangkan. Pilihan sempurna untuk keluarga kecil.</p>
+                            
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <i class="fa-solid fa-wifi"></i>
+                                    <span>WiFi Gratis</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fa-solid fa-mug-saucer"></i>
+                                    <span>Sarapan & Dinner</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fa-solid fa-square-parking"></i>
+                                    <span>Tempat Parkir</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fa-solid fa-users"></i>
+                                    <span>Maks. 4 Orang</span>
+                                </div>
+                            </div>
+
+                            <div class="availability-info">
+                                <p>Unit Tersedia: <span>10</span></p>
+                                <p>Kapasitas: <span>4 Orang</span></p>
+                            </div>
+                        </div>
+
+                        <div class="price-block">
+                            <div>
+                                <span class="text-s" style="color: var(--text-secondary);">Mulai Dari</span>
+                                <p class="price-value">
+                                    Rp 350.000
+                                    <span class="price-unit">/kamar</span>
+                                </p>
+                            </div>
+                            <button class="cta-button">
+                                Pesan Sekarang
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="fasilitas" class="amenitas-subsection">
+                <h2 class="subsection-heading">Fasilitas di Area Destinasi</h2>
+                
+                <div class="facilities-grid">
+                    <div class="facility-item">
+                        <i class="fa-solid fa-toilet"></i>
+                        <p>Toilet Bersih</p>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-route"></i>
+                        <p>Akses Jalan Baik</p>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-camera"></i>
+                        <p>Spot Foto Instagramable</p>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-utensils"></i>
+                        <p>Area Bersantap</p>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-chess-rook"></i>
+                        <p>Area Bermain Anak</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="transportasi" class="amenitas-subsection">
+                <h2 class="subsection-heading">Opsi Transportasi Lokal</h2>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <img src="https://placehold.co/600x400/C21010/ffffff?text=Bemo+Lokal" alt="Bemo Lokal">
+                        <div class="content-card-body">
+                            <h3>Bemo Ikonik</h3>
+                            <p>Angkutan umum ikonik, cepat, dan murah untuk jarak pendek. Rasakan sensasi bepergian seperti warga lokal.</p>
+                            <button class="content-card-button">Lihat Rute ></button>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <img src="https://placehold.co/600x400/4a7c44/ffffff?text=Van+Pribadi" alt="Van Transport">
+                        <div class="content-card-body">
+                            <h3>Sewa Van Transport</h3>
+                            <p>Sewa van ber-AC dengan supir berpengalaman untuk perjalanan kelompok yang lebih nyaman dan fleksibel.</p>
+                            <button class="content-card-button">Hubungi Penyedia ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="kuliner" class="amenitas-subsection">
+                <h2 class="subsection-heading">Kuliner Khas Lokal</h2>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <img src="https://placehold.co/600x400/EB5353/ffffff?text=Sate+Lilit" alt="Sate Lilit">
+                        <div class="content-card-body">
+                            <h3>Sate Lilit Khas Rempah</h3>
+                            <p>Sate lilit yang dibalut bumbu rempah dengan cita rasa lokal yang kaya. Wajib dicoba!</p>
+                            <button class="content-card-button">Cari Lokasi ></button>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <img src="https://placehold.co/600x400/5d9657/ffffff?text=Es+Kelapa" alt="Es Kelapa Muda">
+                        <div class="content-card-body">
+                            <h3>Es Kelapa Muda Segar</h3>
+                            <p>Minuman segar pelepas dahaga, dengan air dan daging kelapa muda alami. Cocok untuk cuaca panas.</p>
+                            <button class="content-card-button">Cari Lokasi ></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- THEME INITIALIZATION ---
+            function initializeTheme() {
+                const themeToggle = document.getElementById('theme-toggle');
+                if (themeToggle) {
+                    themeToggle.addEventListener('click', () => {
+                        document.body.classList.toggle('dark-mode');
+                        const isDarkMode = document.body.classList.contains('dark-mode');
+                        themeToggle.setAttribute('aria-pressed', isDarkMode);
+                        // You can add logic here to save the theme preference in localStorage
+                    });
+                }
+            }
+
+            // --- NAVIGATION INITIALIZATION ---
+            function initializeNavigation() {
+                const hamburger = document.getElementById('hamburger');
+                const navMenuWrapper = document.getElementById('nav-menu-wrapper');
+                const dropdownItems = document.querySelectorAll('.nav-item.has-dropdown');
+
+                if (!hamburger || !navMenuWrapper) {
+                    console.warn("Essential navigation elements (hamburger or menu wrapper) not found.");
+                    return;
+                }
+
+                // Hamburger Toggle
+                hamburger.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isActive = hamburger.classList.toggle('active');
+                    navMenuWrapper.classList.toggle('active');
+                    hamburger.setAttribute('aria-expanded', isActive);
+                    document.body.style.overflow = isActive ? 'hidden' : '';
+                });
+
+                // Dropdown Toggle (for mobile)
+                dropdownItems.forEach(item => {
+                    const link = item.querySelector('.nav-link');
+                    const dropdownMenu = item.querySelector('.dropdown-menu');
+                    if (!link || !dropdownMenu) return;
+
+                    link.addEventListener('click', (e) => {
+                        // Only prevent default on mobile view
+                        if (window.innerWidth < 992) {
+                            e.preventDefault();
+                            const isAlreadyActive = item.classList.contains('dropdown-active');
+                            
+                            // Close other dropdowns
+                            dropdownItems.forEach(otherItem => {
+                                if(otherItem !== item) {
+                                    otherItem.classList.remove('dropdown-active');
+                                    otherItem.querySelector('.dropdown-menu').classList.remove('active');
+                                }
+                            });
+
+                            // Toggle current dropdown
+                            if (!isAlreadyActive) {
+                                item.classList.add('dropdown-active');
+                                dropdownMenu.classList.add('active');
+                            } else {
+                                item.classList.remove('dropdown-active');
+                                dropdownMenu.classList.remove('active');
+                            }
+                        }
+                    });
+                });
+            }
+
+            // Run initializers
+            initializeTheme();
+            initializeNavigation();
+        });
+    </script>
+    
+</body>
+</html>
