@@ -88,25 +88,36 @@ document.addEventListener('DOMContentLoaded', () => {
     /* Main function to fetch the navbar HTML, inject it into the placeholder, and then initialize all its interactive components. */
     async function loadAndSetupNavbar() {
         const placeholder = document.getElementById('navbar-placeholder');
+        const ftrplaceholder = document.getElementById('footer-placeholder');
         if (!placeholder) {
             console.error("Fatal: Navbar placeholder element not found in the document.");
             return;
         }
-
+        if (!ftrplaceholder) {
+            console.error("Fatal: Footer placeholder element not found in the document.");
+            return;
+        }
         try {
             const response = await fetch('nav.html');
+            const ftrresponse = await fetch('footer.html');
             if (!response.ok) {
                 throw new Error(`Network response was not ok. Status: ${response.status}`);
+            }
+            if (!ftrresponse.ok) {
+                throw new Error(`Network response was not ok. Status: ${ftrresponse.status}`);
             }
             const navHTML = await response.text();
             placeholder.innerHTML = navHTML;
 
+            const footerHTML = await ftrresponse.text();
+            ftrplaceholder.innerHTML = footerHTML;
             // Now that the navbar is in the DOM, initialize its features.
             initializeTheme();
             initializeNavigation();
         } catch (error) {
             console.error('There was a problem loading the navigation:', error);
             placeholder.innerHTML = '<p style="color: red; text-align: center; padding: 1rem;">Failed to load navigation.</p>';
+            ftrplaceholder.innerHTML = '<p style="color: red; text-align: center; padding: 1rem;">Failed to load footer.</p>';
         }
     }
     loadAndSetupNavbar();
