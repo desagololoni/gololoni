@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/paket.css">
     <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
                     <span>Desa Golo Loni</span>
                 </h1>
                 <p class="description">
-                    Selamat Datang di Desa Wisata Terbaik NTT<br><span>Back To Nature</span>
+                    Selamat Datang di Desa Wisata Terbaik NTT<br><span style="color: var(--secondary); font-size: var(--fontXL);">Back To Nature</span>
                 </p>
                 <div class="cta-container">
                     <button class="cta-button" onclick="handleCTAClick()">
@@ -79,7 +79,7 @@
         <section class="attraction" id="attraction">
             <div class="header">
                 <h2>Attraction</h2>
-                <p>Lihat atraksi Di SIni Atraksi yey yey</p>
+                <p>Lihat berbagai macam atraksi yang menunggumu di Desa Wisata Golo Loni.</p>
             </div>
             <div class="attraction-grid">
                 <div class="AttractionGallery" id="AttractionGallery"></div>
@@ -88,7 +88,7 @@
         <section class="paket" id="paket">
             <div class="header">
                 <h2>Paket Wisata</h2>
-                <p>Lihat paket yang sudah ada dibuat yeyey</p>
+                <p>Pilih berbagai pilihan paket wisata yang sesuai dengan kebutuhan travel anda.</p>
             </div>
             <div class="packages-grid">
                 <div class="plan-card">
@@ -166,8 +166,8 @@
                 <a href="amenitas.html" class="amenities-button">Lihat Fasilitas</a>
             </div>
         </section>
-        <section class="product-slider-section">
-            <div class="container">
+        <section class="product-slider-section" id="product">
+            <div class="prd-container">
                 <h2 class="section-title">Produk Lokal Kami</h2>
 
                 <div class="filter-controls">
@@ -186,79 +186,174 @@
 
                     <div class="slider-container">
                         <div class="slider-track">
-                            <article class="product-card" data-category="drink">
+                            <article class="product-card" data-category="food">
                                 <div class="product-image">
-                                    <img src="https://images.unsplash.com/photo-1551030173-1929ba646353?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEyfHxzbW9vdGhpZXxlbnwwfHx8fDE2NjY4OTAwMDA&ixlib=rb-4.0.3&q=80&w=400"
-                                        alt="Berry Smoothie">
+                                    <img src="media/img/talas.jpeg"
+                                        alt="Teko Taro">
                                 </div>
                                 <div class="product-info">
-                                    <h3 class="product-name">Sunset Berry Smoothie</h3>
-                                    <p class="product-description">A refreshing blend of strawberries, blueberries, and
-                                        a hint of mango.</p>
+                                    <h3 class="product-name">Teko Taro</h3>
+                                    <p class="product-description">Teko Taro adalah keripik yang terbuat dari olahan umbi talas.</p>
                                 </div>
                             </article>
 
                             <article class="product-card" data-category="food">
                                 <div class="product-image">
-                                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEwfHxwaXp6YXxlbnwwfHx8fDE2NjY4OTAwMDA&ixlib=rb-4.0.3&q=80&w=400"
-                                        alt="Gourmet Pizza">
+                                    <img src="media/img/pegagan.jpg"
+                                        alt="pegagan">
                                 </div>
                                 <div class="product-info">
-                                    <h3 class="product-name">Gourmet Margherita</h3>
-                                    <p class="product-description">Classic pizza with fresh mozzarella, basil, and a
-                                        rich tomato sauce.</p>
-                                </div>
-                            </article>
-
-                            <article class="product-card" data-category="art">
-                                <div class="product-image">
-                                    <img src="https://images.unsplash.com/photo-1547891654-e66ed711b934?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEwfHxwYWludGluZ3xlbnwwfHx8fDE2NjY4OTAwMDA&ixlib=rb-4.0.3&q=80&w=400"
-                                        alt="Abstract Painting">
-                                </div>
-                                <div class="product-info">
-                                    <h3 class="product-name">Abstract Canvas</h3>
-                                    <p class="product-description">A vibrant, hand-painted piece to bring color to any
-                                        room.</p>
+                                    <h3 class="product-name">Keripik Pegagan</h3>
+                                    <p class="product-description">Keripik renyah dari olahan daun pegagan.</p>
                                 </div>
                             </article>
 
                             <article class="product-card" data-category="food">
                                 <div class="product-image">
-                                    <img src="https://images.unsplash.com/photo-1484723050470-65e94b6d4371?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEwfHxidXJnZXJ8ZW58MHx8fHwxNjY2ODkwMDAw&ixlib=rb-4.0.3&q=80&w=400"
-                                        alt="Gourmet Burger">
+                                    <img src="media/img/Fried-cassava.jpg"
+                                        alt="Fried Cassava">
                                 </div>
                                 <div class="product-info">
-                                    <h3 class="product-name">The Ultimate Burger</h3>
-                                    <p class="product-description">Juicy beef patty with aged cheddar, crispy bacon, and
-                                        our secret sauce.</p>
+                                    <h3 class="product-name">Fried Cassava</h3>
+                                    <p class="product-description">Cemilan lezat dan mengenyangkan berupa singkong goreng.</p>
+                                </div>
+                            </article>
+
+                            <article class="product-card" data-category="food">
+                                <div class="product-image">
+                                    <img src="media/img/kokor.jpg"
+                                        alt="Teko Kokor">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Teko Kokor</h3>
+                                    <p class="product-description">Makanan jenis umbi-umbian yang kaya karbohidrat.</p>
+                                </div>
+                            </article>
+
+                            <article class="product-card" data-category="food">
+                                <div class="product-image">
+                                    <img src="media/img/burjo.jpg"
+                                        alt="Bubur Kacang Hijau">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Bubur Kacang Hijau</h3>
+                                    <p class="product-description">Bubur manis dari isian kacang hijau.</p>
+                                </div>
+                            </article>
+
+                            <article class="product-card" data-category="food">
+                                <div class="product-image">
+                                    <img src="media/img/kolak.jpg"
+                                        alt="Kolak">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Kolak</h3>
+                                    <p class="product-description">Hidangan kuah manis berisikan olahan pisang dan ubi.</p>
+                                </div>
+                            </article>
+
+                            <article class="product-card" data-category="food">
+                                <div class="product-image">
+                                    <img src="media/img/rebok.jpeg"
+                                        alt="Siki Seko">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Siki Seko</h3>
+                                    <p class="product-description">Makanan tradisional khas Manggarai, NTT, terbuat dari beras yang melewati berbagai proses pemasakan.</p>
+                                </div>
+                            </article>
+
+                            <article class="product-card" data-category="food">
+                                <div class="product-image">
+                                    <img src="media/img/ikantawar.png"
+                                        alt="Ikan Bakar">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Ikan Bakar</h3>
+                                    <p class="product-description">Ikan hasil pancing yang dipanggang dengan tambahan bumbu dan kecap.</p>
                                 </div>
                             </article>
 
                             <article class="product-card" data-category="drink">
                                 <div class="product-image">
-                                    <img src="https://images.unsplash.com/photo-1514362545857-3bc7dca47259?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEwfHxjb2NrdGFpbHxlbnwwfHx8fDE2NjY4OTAwMDA&ixlib=rb-4.0.3&q=80&w=400"
-                                        alt="Craft Cocktail">
+                                    <img src="media/img/kedaikopi.jpg"
+                                        alt="Kopi hitam">
                                 </div>
                                 <div class="product-info">
-                                    <h3 class="product-name">Citrus Burst Cocktail</h3>
-                                    <p class="product-description">A zesty and invigorating cocktail made with premium
-                                        gin and fresh citrus.</p>
+                                    <h3 class="product-name">Kopi Hitam</h3>
+                                    <p class="product-description">Seduhan kopi hitam murni yang pahit dan panas.</p>
+                                </div>
+                            </article>
+
+                            <article class="product-card" data-category="drink">
+                                <div class="product-image">
+                                    <img src="media/img/saritemulawak.webp"
+                                        alt="Sari Temulawak">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Sari Temulawak</h3>
+                                    <p class="product-description">Minuman herbal dari olahan sari temulawak.
+</p>
+                                </div>
+                            </article>
+
+                            <article class="product-card" data-category="drink">
+                                <div class="product-image">
+                                    <img src="media/img/tehbambu.png"
+                                        alt="Teh Bambu">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Teh Bambu</h3>
+                                    <p class="product-description">Minuman herbal dari olahan daun bambu.</p>
+                                </div>
+                            </article>
+                            
+                            <article class="product-card" data-category="drink">
+                                <div class="product-image">
+                                    <img src="media/img/wedangjahe.jpg"
+                                        alt="Wedang Jahe">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Wedang Jahe</h3>
+                                    <p class="product-description">Minuman berkhasiat dari olahan sari jahe.</p>
+                                </div>
+                            </article>
+                            
+                            <article class="product-card" data-category="art">
+                                <div class="product-image">
+                                    <img src="media/img/about1.jpg"
+                                        alt="Songket Tenun">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Songket Tenun</h3>
+                                    <p class="product-description">Kain songket yang ditenun warga lokal Golo Loni, membuat berbagai jenis pakaian.</p>
                                 </div>
                             </article>
 
                             <article class="product-card" data-category="art">
                                 <div class="product-image">
-                                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDIyfHxwYWludGluZ3xlbnwwfHx8fDE2NjY4OTAwMDA&ixlib=rb-4.0.3&q=80&w=400"
-                                        alt="Colorful Art">
+                                    <img src="media/img/pahat.jpeg"
+                                        alt="Ukiran Kayu">
                                 </div>
                                 <div class="product-info">
-                                    <h3 class="product-name">Cosmic Dreams</h3>
-                                    <p class="product-description">An exploration of color and texture on a medium
-                                        canvas. One of a kind.</p>
+                                    <h3 class="product-name">Ukiran Kayu</h3>
+                                    <p class="product-description">Seni ukir kayu dengan detail dan estetika sebagai dekorasi yang unik.</p>
+                                </div>
+                            </article>
+
+                            <article class="product-card" data-category="art">
+                                <div class="product-image">
+                                    <img src="media/img/anyam.jpeg"
+                                        alt="anyaman rotan">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">Anyaman Rotan</h3>
+                                    <p class="product-description">Kerajinan anyaman rotan yang menghasilkan berbagai produk rotan yang dekoratif dan dapat dipakai.</p>
                                 </div>
                             </article>
                         </div>
                     </div>
+
 
                     <button class="slider-btn next-btn" aria-label="Next slide">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">

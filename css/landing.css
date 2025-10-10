@@ -45,7 +45,7 @@
 }
 
 .description {
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: var(--fontL);
     margin: 1rem 0 2rem;
     text-shadow: 1px 1px 4px var(--overlay-dark);
     color: #e0e0e0;

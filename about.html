@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about - Desa Golo Loni</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="js/script.js" defer></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333333;
+            background-color: #F4F4F4;
+            line-height: 1.6;
+        }
+
+        section {
+            padding: 60px 20px;
+        }
+
+        .abt-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container-narrow {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            min-height: 100dvh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .hero-slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+        }
+
+        .hero-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* abt Section - Left Border Style with Climate Info */
+        .abt {
+            background-color: #f5f5f5;
+            color: #333333;
+            padding: 40px 20px;
+        }
+
+        .abt-container {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .abt-content {
+            flex: 1;
+            border-left: 5px solid #4CAF50;
+            padding-left: 30px;
+        }
+
+        .abt-content h2 {
+            color: #4CAF50;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .abt-content p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            text-align: justify;
+            color: #555555;
+        }
+
+        .climate-widget {
+            flex: 0 0 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .climate-card {
+            background: transparent;
+            padding: 15px 25px;
+            border-radius: 30px;
+            border: 2px solid #4CAF50;
+            text-align: left;
+            font-weight: 400;
+            font-size: 1rem;
+            color: #333333;
+        }
+
+        .climate-card.rainfall {
+            border-color: #2196F3;
+        }
+
+        .climate-card.season {
+            border-color: #4CAF50;
+        }
+
+        .climate-card.temperature {
+            border-color: #FF9800;
+        }
+
+        .climate-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .climate-icon {
+            font-size: 1.5rem;
+        }
+
+        .climate-details {
+            flex: 1;
+        }
+
+        .climate-label {
+            font-size: 0.85rem;
+            color: #777777;
+            margin-bottom: 2px;
+        }
+
+        .climate-value {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333333;
+        }
+
+        .climate-description {
+            font-size: 0.9rem;
+            color: #666666;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
+        .climate-title {
+            color: #d32f2f;
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            text-align: right;
+        }
+
+        /* Location Section with Map Side by Side */
+        .location-section {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .location-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .location-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .location-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: white;
+        }
+
+        .location-header h2 {
+            font-size: var(--fontXXL);
+            color: var(--text-color);
+            font-weight: 700;
+        }
+
+        .location-content {
+            display: flex;
+            gap: 2rem;
+            background: var(--bg-box);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px var(--shadow-color);
+        }
+
+        .location-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .address-block {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .address-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--bg-card);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .address-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--primary);
+        }
+
+        .address-text {
+            flex: 1;
+        }
+
+        .address-text h3 {
+            font-size: var(--fontL);
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .address-text p {
+            font-size: var(--fontM);
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .map-container {
+            flex: 1.5;
+            min-width: 0;
+        }
+
+        .map-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        @media (max-width: 968px) {
+            .location-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .map-wrapper {
+                padding-bottom: 70%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 2rem 1rem;
+            }
+
+            .location-header {
+                margin-bottom: 1.5rem;
+            }
+
+            .location-icon {
+                width: 42px;
+                height: 42px;
+            }
+
+            .location-icon svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            .location-content {
+                padding: 1.5rem;
+                gap: 1.5rem;
+            }
+
+            .address-block {
+                gap: 0.75rem;
+            }
+
+            .address-icon {
+                width: 36px;
+                height: 36px;
+            }
+
+            .address-icon svg {
+                width: 20px;
+                height: 20px;
+            }
+
+            .map-wrapper {
+                padding-bottom: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1.5rem 0.75rem;
+            }
+
+            .location-header {
+                gap: 0.75rem;
+            }
+
+            .location-icon {
+                width: 38px;
+                height: 38px;
+            }
+
+            .location-content {
+                padding: 1.25rem;
+            }
+        }
+
+        /* Climate Section */
+        .climate {
+            background-color: #F4F4F4;
+            padding: 40px 20px;
+            display: none;
+        }
+
+        .climate-content {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .climate-content h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .climate-content p {
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        /* Gallery Section - Masonry Layout */
+        .gallery {
+            background-color: white;
+        }
+
+        .gallery h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        .gallery-grid {
+            column-count: 3;
+            column-gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .gallery-grid {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .gallery-grid {
+                column-count: 1;
+            }
+
+            .abt-container {
+                flex-direction: column;
+            }
+
+            .climate-widget {
+                flex: 1;
+                width: 100%;
+            }
+
+            .abt-content {
+                padding-left: 20px;
+            }
+
+            .climate-title {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <section class="hero">
+        <div class="hero-slideshow">
+            <div class="hero-slide active"
+                style="background-image: url('media/img/about1.jpg');">
+            </div>
+            <div class="hero-slide"
+                style="background-image: url('media/img/aboutus.jpg');">
+            </div>
+            <div class="hero-slide"
+                style="background-image: url('media/img/songket.jpg');">
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Welcome to Our Jakarta Hub</h1>
+            <p>Discover the heart of our operations in Indonesia's vibrant capital.</p>
+        </div>
+    </section>
+
+    <!-- abt Section -->
+    <section class="abt">
+        <div class="abt-container">
+            <div class="abt-content">
+                <h2>about Us</h2>
+                <p>Terletak di Kecamatan Rana Mese, Kabupaten Manggarai Timur, Provinsi Nusa Tenggara Timur, Desa Golo
+                Loni membentang di jalur strategis negara Ruteng–Borong. Dengan luas wilayah 9,3 km² dan berada di
+                ketinggian rata-rata 1.106,9 meter di atas permukaan laut, desa ini menawarkan udara sejuk dan
+                panorama alam yang memanjakan mata. Secara geografis, Golo Loni berada di koordinat sekitar 8,66° LS
+                dan 120,56° BT.</p>
+
+                <p> Ikon utama desa ini adalah Danau Rana Mese—danau vulkanik seluas ±5 hektar dengan kedalaman 43
+                meter, terletak di ketinggian 1.200 mdpl. Sejak tahun 2000, kawasan ini dikelola oleh Taman Wisata
+                Alam (TWA) Ruteng. Danau ini diapit oleh dua gunung megah: Gunung Mandosawu (2.400 mdpl), puncak
+                tertinggi di pegunungan Ruteng, dan Gunung Ranaka (2.140 mdpl). Tak jauh dari danau, terdapat air
+                terjun setinggi ±40 meter yang menambah kesejukan dan keindahan alam sekitar.</p>
+
+                <p>Beragam aktivitas wisata dapat dinikmati di sini, mulai dari memancing, trekking mengelilingi danau,
+                hingga mengamati burung-burung eksotis. Fasilitas yang tersedia
+                meliputi visitor center, tempat untuk bersantai, jalur trekking, dan hutan konservasi yang asri.</p>
+
+                <p>Secara administratif, batas wilayah Desa Golo Loni adalah:<br>
+                <strong>Utara:</strong> Desa Bangka Pau<br>
+                <strong>Selatan:</strong> Compang Kempo<br>
+                <strong>Timur:</strong> Desa Bangka Kempo<br>
+                <strong>Barat:</strong> Desa Compang Loni</p>
+
+                <p>Akses menuju Golo Loni sangat mudah. Dari Ruteng, jaraknya sekitar 25 km, sementara dari Borong
+                hanya memerlukan perjalanan singkat. Jalan yang dilalui tergolong baik, dan tersedia kendaraan
+                sewaan dengan tarif terjangkau.</p>
+
+                <p>Dikenal sebagai desa agrowisata, Golo Loni memadukan potensi alam, pertanian, dan wisata,
+                menghadirkan pengalaman yang lengkap—mulai dari keindahan lanskap, kekayaan hayati, hingga keramahan
+                masyarakatnya.</p>
+            </div>
+
+            <div class="climate-widget">
+                <div class="climate-title">Iklim</div>
+                <div class="climate-card rainfall">
+                    <div class="climate-info">
+                        <div class="climate-icon">🌧️</div>
+                        <div class="climate-details">
+                            <div class="climate-label">Curah Hujan</div>
+                            <div class="climate-value">21,66MM</div>
+                            <div class="climate-description">Average rainfall during monsoon season with peak
+                                precipitation from December to February</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="climate-card season">
+                    <div class="climate-info">
+                        <div class="climate-icon">🌤️</div>
+                        <div class="climate-details">
+                            <div class="climate-label">Musim</div>
+                            <div class="climate-value">Iklim Muson Tropis</div>
+                            <div class="climate-description">Tropical monsoon climate with two distinct seasons: wet
+                                season (October-May) and dry season (June-September)</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="climate-card temperature">
+                    <div class="climate-info">
+                        <div class="climate-icon">🌡️</div>
+                        <div class="climate-details">
+                            <div class="climate-label">Suhu</div>
+                            <div class="climate-value">16°C hingga 28°C</div>
+                            <div class="climate-description">Consistent warm temperatures year-round with high humidity
+                                levels averaging 75-85%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section with Map -->
+    <section class="location-section">
+        <div class="location-header">
+            <div class="location-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                        d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                </svg>
+            </div>
+            <h2>Lokasi Kami</h2>
+        </div>
+
+        <div class="location-content">
+            <div class="location-info">
+                <div class="address-block">
+                    <div class="address-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
+                    </div>
+                    <div class="address-text">
+                        <h3>Alamat</h3>
+                        <p>Jln. Trans Flores, Golo Loni, Kec. Rana Mese, Kabupaten Manggarai Timur, Nusa Tenggara Tim.
+                            86519</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <div class="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37524.511741095965!2d120.54034217002278!3d-8.66504923057071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2db30de6e394e0e7%3A0x2f89fce6019c73a5!2sDesa%20Wisata%20Golo%20Loni!5e0!3m2!1sen!2sid!4v1760056998340!5m2!1sen!2sid"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="header">
+            <h2>Gallery</h2>
+        </div>
+        <div class="abt-container">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/300?random=1" alt="City Life">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/500?random=2" alt="Office Space">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/400?random=3" alt="Team Collaboration">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/350?random=4" alt="Modern Workspace">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/450?random=5" alt="City View">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/320?random=6" alt="Business District">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/380?random=7" alt="Conference Room">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/420?random=8" alt="Innovation Lab">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/360?random=9" alt="Team Meeting">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/480?random=10" alt="Office Interior">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/340?random=11" alt="Work Environment">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/400/410?random=12" alt="Corporate Culture">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>

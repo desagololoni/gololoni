@@ -33,6 +33,24 @@
             --fontXXL: clamp(1.75rem, 5vw + 0.5rem, 3rem);
         }
 
+        body.dark-mode {
+            --primary: #6bb05f;
+            --primary-hover: #88c57f;
+            --primary-light: #9ed896;
+
+            --secondary: #e91f1f;
+            --secondary-hover: #ff4444;
+            --secondary-light: #ff6b6b;
+
+            --text-color: #e8e8e8;
+            --text-secondary: #b8b8b8;
+            --bg-surface: #0f0f0f;
+            --bg-box: #2f3436;
+            --bg-card: #252525;
+            --border-color: #2d2d2d;
+            --shadow-color: rgba(0, 0, 0, 0.4);
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             color: var(--text-color);
@@ -192,7 +210,7 @@
         .price-block .price-value {
             font-size: var(--fontXXL);
             font-weight: 700;
-            color: var(--secondary);
+            color: var(--secondary-hover);
             line-height: 1;
         }
         .price-block .price-value p {
@@ -230,7 +248,7 @@
         }
 
         .facility-item {
-            background-color: var(--bg-card);
+            background-color: var(--primary);
             padding: 1.25rem;
             border-radius: 0.75rem;
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
@@ -250,7 +268,7 @@
             width: 2rem;
             height: 2rem;
             line-height: 2rem;
-            color: var(--secondary);
+            color: var(--text-color);
             margin-bottom: 0.75rem;
         }
         
@@ -258,7 +276,7 @@
             margin: 0;
             font-size: var(--fontS);
             font-weight: 600;
-            color: var(--text-color);
+            color: var(--bg-box);
         }
 
         /* Transportation & Culinary Section */
@@ -287,7 +305,7 @@
         .content-card h3 {
             font-size: var(--fontL);
             font-weight: 700;
-            color: var(--primary);
+            color: var(--text);
             margin-top: 0;
             margin-bottom: 0.5rem;
         }
@@ -351,22 +369,22 @@
 
     <main>
         <section id="amenitas" class="amenitas-section">
-            <h1 class="section-heading">Amenitas Destinasi</h1>
+            <h1 class="section-heading">Akomodasi Desa</h1>
 
             <div id="akomodasi" class="amenitas-subsection">
-                <h2 class="subsection-heading">Akomodasi Unggulan</h2>
+                <h2 class="subsection-heading">Homestay</h2>
                 
                 <div class="accommodation-card">
                     <div class="accommodation-card-image">
-                        <img src="https://placehold.co/800x600/6bb05f/ffffff?text=Vila+Hijau" alt="Vila Hijau Asri">
+                        <img src="media/img/homestay2.jpeg" alt="Charlie Homestay">
                         <div class="accommodation-card-title-overlay">
-                            <h3>Vila Hijau Asri</h3>
+                            <h3>Charlie's Homestay</h3>
                         </div>
                     </div>
 
                     <div class="accommodation-card-details">
                         <div>
-                            <p class="description">Unit yang nyaman dengan pemandangan pegunungan yang menenangkan. Pilihan sempurna untuk keluarga kecil.</p>
+                            <p class="description">Homestay yang nyaman dengan pemandangan alam yang menenangkan.</p>
                             
                             <div class="features-grid">
                                 <div class="feature-item">
@@ -375,7 +393,7 @@
                                 </div>
                                 <div class="feature-item">
                                     <i class="fa-solid fa-mug-saucer"></i>
-                                    <span>Sarapan & Dinner</span>
+                                    <span>Sarapan, Makan Malam, dan Snack</span>
                                 </div>
                                 <div class="feature-item">
                                     <i class="fa-solid fa-square-parking"></i>
@@ -395,88 +413,121 @@
 
                         <div class="price-block">
                             <div>
-                                <span class="text-s" style="color: var(--text-secondary);">Mulai Dari</span>
+                                <span class="text-s" style="color: var(--text-secondary);"></span>
                                 <p class="price-value">
                                     Rp 350.000
                                     <span class="price-unit">/kamar</span>
                                 </p>
                             </div>
-                            <button class="cta-button">
-                                Pesan Sekarang
-                            </button>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div id="fasilitas" class="amenitas-subsection">
-                <h2 class="subsection-heading">Fasilitas di Area Destinasi</h2>
+                <h2 class="subsection-heading">Fasilitas Desa</h2>
                 
                 <div class="facilities-grid">
                     <div class="facility-item">
-                        <i class="fa-solid fa-toilet"></i>
-                        <p>Toilet Bersih</p>
-                    </div>
-                    <div class="facility-item">
-                        <i class="fa-solid fa-route"></i>
+                        <i class="fa-solid fa-road"></i>
                         <p>Akses Jalan Baik</p>
                     </div>
                     <div class="facility-item">
-                        <i class="fa-solid fa-camera"></i>
-                        <p>Spot Foto Instagramable</p>
+                        <i class="fa-solid fa-water"></i>
+                        <p>Air Bersih</p>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+                        <p>Layanan Perbankan</p>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-tools"></i>
+                        <p>Akomodasi Tersedia</p>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-book"></i>
+                        <p>Fasilitas Pendidikan</p>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-pray"></i>
+                        <p>Fasilitas Keagamaan</p>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-square-parking"></i>
+                        <p>Area Parkir</p>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-toilet"></i>
+                        <p>Kamar Mandi Umum Bersih</p>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-bolt"></i>
+                        <p>Listrik Tersedia</p>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-signal"></i>
+                        <p>Jaringan Komunikasi</p>
                     </div>
                     <div class="facility-item">
                         <i class="fa-solid fa-utensils"></i>
-                        <p>Area Bersantap</p>
+                        <p>Makanan & Minuman</p>
                     </div>
                     <div class="facility-item">
-                        <i class="fa-solid fa-chess-rook"></i>
-                        <p>Area Bermain Anak</p>
+                        <i class="fa-solid fa-newspaper"></i>
+                        <p>Informasi Wisata</p>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-briefcase-medical"></i>
+                        <p>Fasilitas Kesehatan</p>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-camera"></i>
+                        <p>Spot Foto & Selfie</p>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fa-solid fa-tree"></i>
+                        <p>Outbound</p>
                     </div>
                 </div>
             </div>
 
             <div id="transportasi" class="amenitas-subsection">
-                <h2 class="subsection-heading">Opsi Transportasi Lokal</h2>
+                <h2 class="subsection-heading">Transportasi Lokal</h2>
                 
                 <div class="content-grid">
                     <div class="content-card">
-                        <img src="https://placehold.co/600x400/C21010/ffffff?text=Bemo+Lokal" alt="Bemo Lokal">
+                        <img src="media/img/bemo.jpg" alt="Bemo Lokal">
                         <div class="content-card-body">
                             <h3>Bemo Ikonik</h3>
-                            <p>Angkutan umum ikonik, cepat, dan murah untuk jarak pendek. Rasakan sensasi bepergian seperti warga lokal.</p>
-                            <button class="content-card-button">Lihat Rute ></button>
+                            <p>blm</p>
                         </div>
                     </div>
                     <div class="content-card">
                         <img src="https://placehold.co/600x400/4a7c44/ffffff?text=Van+Pribadi" alt="Van Transport">
                         <div class="content-card-body">
                             <h3>Sewa Van Transport</h3>
-                            <p>Sewa van ber-AC dengan supir berpengalaman untuk perjalanan kelompok yang lebih nyaman dan fleksibel.</p>
-                            <button class="content-card-button">Hubungi Penyedia ></button>
+                            <p>blm</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div id="kuliner" class="amenitas-subsection">
-                <h2 class="subsection-heading">Kuliner Khas Lokal</h2>
+                <h2 class="subsection-heading">Kuliner Lokal</h2>
                 
                 <div class="content-grid">
                     <div class="content-card">
-                        <img src="https://placehold.co/600x400/EB5353/ffffff?text=Sate+Lilit" alt="Sate Lilit">
+                        <img src="media/img/pegagan.jpg" alt="Pegagan">
                         <div class="content-card-body">
-                            <h3>Sate Lilit Khas Rempah</h3>
-                            <p>Sate lilit yang dibalut bumbu rempah dengan cita rasa lokal yang kaya. Wajib dicoba!</p>
-                            <button class="content-card-button">Cari Lokasi ></button>
+                            <h3>Keripik Pegagan</h3>
+                            <p>blm</p>
                         </div>
                     </div>
                     <div class="content-card">
-                        <img src="https://placehold.co/600x400/5d9657/ffffff?text=Es+Kelapa" alt="Es Kelapa Muda">
+                        <img src="media/img/tehbambu.png" alt="Teh Bambu">
                         <div class="content-card-body">
-                            <h3>Es Kelapa Muda Segar</h3>
-                            <p>Minuman segar pelepas dahaga, dengan air dan daging kelapa muda alami. Cocok untuk cuaca panas.</p>
-                            <button class="content-card-button">Cari Lokasi ></button>
+                            <h3>Teh Bambu</h3>
+                            <p>blm</p>
                         </div>
                     </div>
                 </div>

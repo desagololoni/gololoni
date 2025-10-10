@@ -1,6 +1,6 @@
 .about {
     padding: 80px 20px;
-    background-color: #f9f9f9;
+    background-color: var(--bg-box);
 }
 
 .about-container {
@@ -20,18 +20,18 @@
 .about-text h2 {
     font-size: 2.5rem;
     margin-bottom: 24px;
-    color: #333;
+    color: var(--primary);
 }
 
 .about-text p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #555;
+    color: var(--text-color);
 }
 
 .about-span {
     font-weight: bold;
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .about-video {

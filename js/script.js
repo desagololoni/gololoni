@@ -98,8 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         try {
-            const response = await fetch('nav.html');
-            const ftrresponse = await fetch('footer.html');
+            const response = await fetch('../nav.html');
+            const ftrresponse = await fetch('../footer.html');
             if (!response.ok) {
                 throw new Error(`Network response was not ok. Status: ${response.status}`);
             }
@@ -129,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "media/img/bg3.jpeg",
         "media/img/bg4.jpeg",
         "media/img/bg5.jpeg",
+        "media/img/alam2.jpg",
     ];
 
     let currentSlide = 0;
