@@ -68,7 +68,7 @@
     z-index: 10;
     width: 44px;
     height: 44px;
-    background-color: var(--card-bg);
+    background-color: var(--primary);
     border: none;
     border-radius: 50%;
     box-shadow: var(--shadow);
@@ -80,7 +80,7 @@
 }
 
 .slider-btn:hover {
-    background-color: #e9ecef;
+    background-color: var(--primary-hover);
     transform: translateY(-50%) scale(1.05);
 }
 
@@ -93,7 +93,7 @@
 .slider-btn svg {
     width: 24px;
     height: 24px;
-    fill: var(--primary-color);
+    fill: var(--text-color);
 }
 
 .prev-btn {

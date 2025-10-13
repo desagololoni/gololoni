@@ -210,14 +210,14 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Bird Watching', image: 'media/img/birdwatching.jpg', description: 'Amati berbagai jenis burung endemik dan migran di habitat aslinya. Sebuah surga bagi para pecinta ornitologi.' },
         { name: 'Golo Depet', image: 'media/img/golodepet.jpg', description: 'Saksikan pemandangan matahari terbit atau terbenam yang spektakuler dari puncak bukit Golo Depet.' },
         { name: 'Waterfall', image: 'media/img/airterjun.jpeg', description: 'Segarkan diri dengan bermain air di bawah gemuruh air terjun yang jernih dan alami.' },
-        { name: 'Tarian Caci', image: 'media/img/tarian.png', description: 'Saksikan tarian perang tradisional yang penuh energi dan makna budaya, sebuah pertunjukan seni yang memukau.' },
-        { name: 'Ritual Penti', image: 'media/img/penti.png', description: 'Ikuti upacara adat Penti, sebuah ritual syukur atas hasil panen yang kaya akan nilai-nilai budaya lokal.' },
+        { name: 'Tarian Caci', image: 'media/img/tarian2.png', description: 'Saksikan tarian perang tradisional yang penuh energi dan makna budaya, sebuah pertunjukan seni yang memukau.' },
+        { name: 'Ritual Penti', image: 'media/img/penti2.jpg', description: 'Ikuti upacara adat Penti, sebuah ritual syukur atas hasil panen yang kaya akan nilai-nilai budaya lokal.' },
         { name: 'Menganyam Tikar', image: 'media/img/tikar3.jpg', description: 'Belajar seni menganyam tikar dari para pengrajin lokal. Setiap proses diajari dan diberi arahan jelas.' },
         { name: 'Membuat Tuak', image: 'media/img/tuak.jpeg', description: 'Lihat langsung proses pembuatan tuak, minuman tradisional dari fermentasi nira aren, dan cicipi rasanya yang khas.' },
         { name: 'Mancing', image: 'media/img/mancing.jpeg', description: 'Uji keberuntungan dan kesabaran Anda dengan memancing di danau atau sungai yang kaya akan ikan, di mana atraksi ini dilakukan di setiap kolam ikan yang telah disediakan oleh masyarakat dan ikan hasil tangkapan dapat ditimbang untuk dibawa pulang atau dinikmati langsung di tempat.' },
         { name: 'Flying Fox', image: 'media/img/flyingfox1.jpeg', description: 'Rasakan adrenalin terpacu saat meluncur dari ketinggian dengan flying fox sepanjang 200 meter di atas persawahan masyarakat setempat, melintasi lembah dengan pemandangan indah dan sensasi alam persawahan yang menakjubkan.' },
         { name: 'Gua Watu Tahang', image: 'media/img/gua2.jpg', description: 'Jelajahi misteri Gua Watu Tahang, sebuah gua alam dengan formasi batuan stalaktit dan stalagmit yang unik yang terletak tepat di bawah persawahan masyarakat, di dalamnya terdapat banyak batu kapur dan dialiri air yang bersumber dari mata air.' },
-        { name: 'Bersepeda', image: 'media/img/sepeda1.jpeg', description: 'Nikmati udara segar pedesaan dengan bersepeda menyusuri jalan setapak, persawahan, dan perkampungan warga.' },
+        { name: 'Bersepeda', image: 'media/img/sepeda3.jpg', description: 'Nikmati udara segar pedesaan dengan bersepeda menyusuri jalan setapak, persawahan, dan perkampungan warga.' },
         { name: 'Danau Rana Mese', image: 'media/img/danau1.jpg', description: 'Kunjungi keindahan Danau Rana Mese, sebuah danau kawah yang tenang dengan panorama alam yang menyejukkan mata, terletak di kawasan Hutan Lindung dan menjadi sumber air minum untuk masyarakat Golo Loni khususnya serta masyarakat Kabupaten Manggarai Timur umumnya.' },
         { name: 'Adopsi Bambu', image: 'media/img/bambu1.jpeg', description: 'Nikmati wisata edukasi yang mengajak Anda untuk terlibat aktif dalam konservasi. Dengan mengadopsi rumpun bambu, Anda turut serta menjaga kelestarian lingkungan. Pertumbuhan tanaman Anda akan di-update secara berkala sebagai bukti nyata kontribusi Anda.' },
         { name: 'Produksi Kopi & Aren', image: 'media/img/kopi.jpg', description: 'Belajar langsung dari para petani bagaimana biji kopi dan nira aren dipanen, diolah, hingga menjadi produk siap saji seperti kopi nikmat dan gula aren. Atraksi wisata ini akan membawa Anda melihat seluruh prosesnya, dari bahan mentah hingga produk akhir, memberikan wawasan mendalam yang tak terlupakan. ' }
@@ -226,29 +226,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const AttractionGallery = document.getElementById('AttractionGallery');
 
     attractionsList.forEach((attraction, index) => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-                <div class="card-bg" style="background-image: url('${attraction.image}')"></div>
-                <div class="card-overlay"></div>
-                <div class="card-badge">#${index + 1}</div>
-                <div class="card-content">
-                    <h2 class="card-title">${attraction.name}</h2>
-                    <p class="card-description">${attraction.description}</p>
-                </div>
-            `;
+        // Create a link element
+        const link = document.createElement('a');
+        link.className = 'card-link';
+        // The link points to the detail page with the index as a URL parameter
+        link.href = `attraction-detail.html?id=${index}`;
 
-        // Toggle active state on click/tap
-        card.addEventListener('click', function () {
-            // Remove active from all other cards
-            document.querySelectorAll('.card').forEach(c => {
-                if (c !== card) c.classList.remove('active');
-            });
-            // Toggle current card
-            this.classList.toggle('active');
-        });
+        // Create the card structure inside the link
+        link.innerHTML = `
+        <div class="card">
+            <div class="card-bg" style="background-image: url('${attraction.image}')"></div>
+            <div class="card-overlay"></div>
+            <div class="card-badge">#${index + 1}</div>
+            <div class="card-content">
+                <h2 class="card-title">${attraction.name}</h2>
+                <p class="card-description">${attraction.description}</p>
+            </div>
+        </div>
+    `;
 
-        AttractionGallery.appendChild(card);
+        AttractionGallery.appendChild(link);
     });
 
     // Close card when clicking outside

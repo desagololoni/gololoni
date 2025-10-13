@@ -1,0 +1,246 @@
+/* Re-using the same root variables from the main stylesheet */
+:root {
+    --primary: #4a7c44;
+    --primary-hover: #2c4629;
+    --primary-light: #6bb05f;
+    --secondary: #C21010;
+    --secondary-hover: #7a0000;
+    --secondary-light: #e91f1f;
+    --text-color: #1a1a1a;
+    --text-secondary: #2c2c2c;
+    --bg-surface: #f5f5f5;
+    --bg-box: #ffffff;
+    --bg-card: #fafafa;
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    --fontXS: clamp(0.75rem, 1vw + 0.5rem, 0.875rem);
+    --fontS: clamp(0.875rem, 1.5vw + 0.5rem, 1rem);
+    --fontM: clamp(1rem, 2vw + 0.5rem, 1.25rem);
+    --fontL: clamp(1.25rem, 3vw + 0.5rem, 1.5rem);
+    --fontXL: clamp(1.5rem, 5vw + 0.5rem, 1.75rem);
+    --fontXXL: clamp(1.75rem, 5vw + 0.5rem, 3rem);
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--bg-surface);
+    color: var(--text-color);
+    margin: 0;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px; /* Wider container for two columns */
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--bg-box);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: var(--fontM);
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: var(--primary-hover);
+}
+
+.attraction-detail {
+    display: flex; /* Flexbox for two-column layout */
+    gap: 3rem; /* Space between image and info */
+    flex-wrap: wrap; /* Allows columns to stack on smaller screens */
+}
+
+.image-gallery-section {
+    flex: 1 1 55%; /* Takes up about 55% width, can shrink */
+    min-width: 300px; /* Minimum width before stacking */
+    position: relative;
+}
+
+.attraction-info-section {
+    flex: 1 1 40%; /* Takes up about 40% width, can shrink */
+    min-width: 300px; /* Minimum width before stacking */
+}
+
+.main-image-display {
+    position: relative;
+    width: 100%;
+    padding-bottom: 60%; /* Aspect ratio 5:3 (height is 60% of width) */
+    background-color: #eee; /* Placeholder background */
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.attraction-hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+    font-size: var(--fontL);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.gallery-nav:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.gallery-nav.prev {
+    left: 1rem;
+}
+
+.gallery-nav.next {
+    right: 1rem;
+}
+
+.thumbnail-gallery-container {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling for thumbnails */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    margin-top: 1rem;
+    padding-bottom: 10px; /* Space for scrollbar */
+}
+
+.thumbnail-gallery {
+    display: flex;
+    gap: 10px;
+    padding: 5px 0; /* Padding for visual spacing */
+}
+
+.thumbnail {
+    width: 80px; /* Fixed width for thumbnails */
+    height: 80px; /* Fixed height for thumbnails */
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+    flex-shrink: 0; /* Prevent shrinking when many thumbnails */
+}
+
+.thumbnail:hover {
+    transform: translateY(-2px);
+}
+
+.thumbnail.active {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+#attraction-title {
+    font-size: var(--fontXXL);
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+#attraction-description {
+    font-size: var(--fontM);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    white-space: pre-wrap;
+}
+
+.attraction-highlights {
+    margin-top: 2.5rem; /* More space from the description above */
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color); /* A subtle separator line */
+}
+
+.attraction-highlights h2 {
+    font-size: var(--fontL);
+    color: var(--primary); /* Use primary color for the heading */
+    margin-bottom: 1rem;
+}
+
+.attraction-highlights ul {
+    list-style: none; /* Remove default browser bullet points */
+    padding-left: 0;
+    margin: 0;
+}
+
+.attraction-highlights li {
+    font-size: var(--fontS); /* Slightly smaller font for readability */
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    padding-left: 1.8rem; /* Make space for the custom icon */
+    position: relative;
+}
+
+/* Custom bullet point styling */
+.attraction-highlights li::before {
+    content: '✔'; /* You can change this to any icon (e.g., '❯', '•') */
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+    top: 5px; /* Adjust vertical alignment */
+    font-weight: bold;
+    font-size: var(--fontM);
+}
+
+.attraction-highlights li strong {
+    color: var(--text-color); /* Make the bolded text slightly darker */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .attraction-detail {
+        gap: 2rem;
+    }
+    .image-gallery-section,
+    .attraction-info-section {
+        flex: 1 1 100%; /* Stack columns on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    .container {
+        padding: 1.5rem;
+    }
+    #attraction-title {
+        font-size: var(--fontXL);
+    }
+    .gallery-nav {
+        padding: 0.6rem 0.9rem;
+        font-size: var(--fontM);
+    }
+}
+
+@media (max-width: 480px) {
+    .thumbnail {
+        width: 60px;
+        height: 60px;
+    }
+    .gallery-nav {
+        padding: 0.4rem 0.7rem;
+        font-size: var(--fontS);
+    }
+}

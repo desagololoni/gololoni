@@ -76,8 +76,8 @@
 }
 
 .cta-button:hover {
-    background-color: transparent;
-    color: var(--primary);
+    background-color: var(--primary-hover);
+    border: 2px solid var(--primary-hover);
 }
 
 .cta-link {
@@ -87,8 +87,9 @@
 }
 
 .cta-link:hover {
-    background-color: var(--text);
+    background-color: white;
     color: #111;
+    border: none;
 }
 
 /* --- Slider Controls --- */
