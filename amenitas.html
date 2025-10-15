@@ -294,7 +294,7 @@
         
         .content-card img {
             width: 100%;
-            height: 12rem;
+            aspect-ratio: 16/9;
             object-fit: cover;
         }
 
@@ -349,16 +349,15 @@
                 padding: 2rem;
             }
             .facilities-grid {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             }
             .content-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             }
         }
 
         @media (min-width: 1024px) {
             .facilities-grid {
-                grid-template-columns: repeat(5, minmax(0, 1fr));
                 gap: 1.5rem;
             }
         }
@@ -486,7 +485,7 @@
                     </div>
                     <div class="facility-item">
                         <i class="fa-solid fa-tree"></i>
-                        <p>Outbound</p>
+                        <p>Ourdoor Ativity</p>
                     </div>
                 </div>
             </div>
@@ -498,15 +497,15 @@
                     <div class="content-card">
                         <img src="media/img/bemo.jpg" alt="Bemo Lokal">
                         <div class="content-card-body">
-                            <h3>Bemo Ikonik</h3>
-                            <p>blm</p>
+                            <h3>Bemo</h3>
+                            <p>Angkutan umum yang ada di NTT, menghubungkan berbagai daerah dengan harga tawar-menawar dan layanan siap jalan.</p>
                         </div>
                     </div>
                     <div class="content-card">
-                        <img src="https://placehold.co/600x400/4a7c44/ffffff?text=Van+Pribadi" alt="Van Transport">
+                        <img src="media/img/travel.jpg" alt="Van Transport">
                         <div class="content-card-body">
-                            <h3>Sewa Van Transport</h3>
-                            <p>blm</p>
+                            <h3>Sewa Travel Van</h3>
+                            <p>Layanan sewa mobil van untuk perjalanan wisatawan, menawarkan kenyamanan dan fleksibilitas dalam menjelajahi Desa Wisata Golo Loni dan sekitarnya.</p>
                         </div>
                     </div>
                 </div>
@@ -517,17 +516,87 @@
                 
                 <div class="content-grid">
                     <div class="content-card">
-                        <img src="media/img/pegagan.jpg" alt="Pegagan">
+                        <img src="media/img/pegagan2.png" alt="Pegagan">
                         <div class="content-card-body">
                             <h3>Keripik Pegagan</h3>
-                            <p>blm</p>
+                            <p>Keripik Pegagan adalah camilan renyah yang terbuat dari daun pegagan, menawarkan cita rasa gurih unik sekaligus manfaat herbal yang menyegarkan</p>
                         </div>
                     </div>
                     <div class="content-card">
-                        <img src="media/img/tehbambu.png" alt="Teh Bambu">
+                        <img src="media/img/talas.jpeg" alt="Pegagan">
+                        <div class="content-card-body">
+                            <h3>Teko Taro</h3>
+                            <p>Teko Taro adalah keripik yang terbuat dari olahan umbi talas</p>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <img src="media/img/Fried-cassava.jpg" alt="Teh Bambu">
+                        <div class="content-card-body">
+                            <h3>Fried Cassava</h3>
+                            <p>Cemilan lezat dan mengenyangkan berupa singkong goreng</p>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <img src="media/img/kokor.jpg" alt="Teh Bambu">
+                        <div class="content-card-body">
+                            <h3>Teko Kokor (Talas)</h3>
+                            <p>Makanan jenis umbi-umbian yang kaya karbohidrat</p>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <img src="media/img/burjo.jpg" alt="Teh Bambu">
+                        <div class="content-card-body">
+                            <h3>Bubur Kacang Hijau</h3>
+                            <p>Bubur Kacang Hijau, hidangan manis yang terbuat dari kacang hijau dan santan</p>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <img src="media/img/kolak.jpg" alt="Teh Bambu">
+                        <div class="content-card-body">
+                            <h3>Kolak</h3>
+                            <p>Hidangan kuah manis berisikan olahan pisang dan ubi</p>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <img src="media/img/rebok.jpeg" alt="Teh Bambu">
+                        <div class="content-card-body">
+                            <h3>Siki Seko</h3>
+                            <p>Makanan tradisional khas Manggarai, NTT, terbuat dari beras yang melewati berbagai proses pemasakan</p>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <img src="media/img/ikantawar.png" alt="Teh Bambu">
+                        <div class="content-card-body">
+                            <h3>Ikan Bakar</h3>
+                            <p>Ikan hasil pancing yang dipanggang dengan tambahan bumbu dan kecap</p>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <img src="media/img/coffee.jpg" alt="Teh Bambu">
+                        <div class="content-card-body">
+                            <h3>Kopi Hitam Golo Loni</h3>
+                            <p>Seduhan kopi hitam murni yang pahit dan panas, olahan langsung dari penduduk lokal</p>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <img src="media/img/tehbambu2.webp" alt="Teh Bambu">
                         <div class="content-card-body">
                             <h3>Teh Bambu</h3>
-                            <p>blm</p>
+                            <p>Teh Bambu, minuman herbal alami dengan aroma segar bambu yang menenangkan</p>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <img src="media/img/saritemulawak.webp" alt="Teh Bambu">
+                        <div class="content-card-body">
+                            <h3>Sari Temulawak</h3>
+                            <p>Minuman herbal dari olahan sari temulawak</p>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <img src="media/img/wedangjahe.jpg" alt="Teh Bambu">
+                        <div class="content-card-body">
+                            <h3>Wedang Jahe</h3>
+                            <p>Minuman berkhasiat dari olahan sari jahe</p>
                         </div>
                     </div>
                 </div>
