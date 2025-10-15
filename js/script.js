@@ -1,3 +1,142 @@
+// Nav and Footer
+const navHTML = `
+<nav class="navbar" role="navigation" aria-label="Main Navigation">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo-link" aria-label="Homepage">
+            <img src="media/img/LogoGL.png" alt="Logo Golo Loni" class="nav-logo-img">
+        </a>
+
+        <div class="nav-menu-wrapper" id="nav-menu-wrapper">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Beranda</a>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a class="nav-link"><p>Profil Desa</p><i
+                            class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="menuitem"><a href="about.html" class="dropdown-link">Tentang Desa</a></li>
+                        <li role="menuitem"><a href="about.html#maps" class="dropdown-link">Peta</a></li>
+                        <li role="menuitem"><a href="about.html#galeriAbout" class="dropdown-link">Galeri</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="index.html#attraction" class="nav-link"><p>Atraksi</p></a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#paket" class="nav-link">Paket Wisata</a>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a class="nav-link"><p>Amenitas</p> <i
+                            class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="menuitem"><a href="amenitas.html" class="dropdown-link">Akomodasi</a>
+                        </li>
+                        <li role="menuitem"><a href="amenitas.html#fasilitas" class="dropdown-link">Fasilitas</a></li>
+                        <li role="menuitem"><a href="amenitas.html#transportasi"
+                                class="dropdown-link">Transportasi</a></li>
+                        <li role="menuitem"><a href="amenitas.html#kuliner" class="dropdown-link">Kuliner</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="index.html#product" class="nav-link">Produk Lokal</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Kontak</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav-actions">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false">
+                <i class="fa-solid fa-sun theme-icon sun-icon"></i>
+                <i class="fa-solid fa-moon theme-icon moon-icon"></i>
+            </button>
+            <button class="hamburger" id="hamburger" aria-controls="nav-menu-wrapper" aria-expanded="false">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+</nav>
+`;
+const footerHTML = `
+<footer class="footer" id="contact">
+    <div class="footer-main">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section footer-brand">
+                    <div class="footer-logo">
+                        <img src="media/img/LogoGL.png" alt="GOLO LONI Logo" class="footer-logo-icon">
+                        <div class="footer-logo-text">
+                            <h2>GOLO LONI</h2>
+                            <p>Desa Wisata</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Nikmati keindahan alam dan kekayaan budaya Manggarai di Desa Wisata Golo Loni.
+                        Destinasi wisata yang menawarkan pengalaman autentik dan tak terlupakan.
+                    </p>
+                    <div class="footer-social-media">
+                        <a href="https://www.instagram.com/gololoni_" class="footer-social-icon" title="Instagram"
+                            target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/desawisatagoloni/" class="footer-social-icon" title="Facebook"
+                            target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Navigasi</h3>
+                    <nav class="footer-nav">
+                        <a href="index.html" class="footer-nav-link">Beranda</a>
+                        <a href="index.html#about" class="footer-nav-link">Tentang Kami</a>
+                        <a href="index.html#attraction" class="footer-nav-link">Atraksi</a>
+                        <a href="index.html#packages" class="footer-nav-link">Paket Wisata</a>
+                        <a href="about.html#galeriAbout" class="footer-nav-link">Galeri</a>
+                    </nav>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Kontak</h3>
+                    <div class="footer-contact-info">
+                        <div class="footer-contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Desa Golo Loni, Kec. Rana Mese, Kab. Manggarai Timur, NTT, Indonesia.</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+6282145315266">+62 821-4531-5266</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fa-brands fa-facebook"></i>
+                            <a href="https://www.facebook.com/desawisatagololoni" target="_blank">desawisatagololoni</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i class="fa-brands fa-instagram"></i>
+                            <a href="https://www.instagram.com/gololoni_?igshid=MWZjMTM2ODFkZg%3D%3D"
+                                target="_blank">gololoni_</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>&copy; 2025 Desa Wisata Golo Loni. Dikembangkan oleh <a href="#" target="_blank">Desa Golo
+                    Loni</a>
+            </p>
+        </div>
+    </div>
+</footer>
+`;
+
 document.addEventListener('DOMContentLoaded', () => {
     function initializeTheme() {
         const themeToggle = document.getElementById('theme-toggle');
@@ -85,42 +224,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* Main function to fetch the navbar HTML, inject it into the placeholder, and then initialize all its interactive components. */
-    async function loadAndSetupNavbar() {
-        const placeholder = document.getElementById('navbar-placeholder');
-        const ftrplaceholder = document.getElementById('footer-placeholder');
-        if (!placeholder) {
-            console.error("Fatal: Navbar placeholder element not found in the document.");
-            return;
-        }
-        if (!ftrplaceholder) {
-            console.error("Fatal: Footer placeholder element not found in the document.");
-            return;
-        }
-        try {
-            const response = await fetch('../nav.html');
-            const ftrresponse = await fetch('../footer.html');
-            if (!response.ok) {
-                throw new Error(`Network response was not ok. Status: ${response.status}`);
-            }
-            if (!ftrresponse.ok) {
-                throw new Error(`Network response was not ok. Status: ${ftrresponse.status}`);
-            }
-            const navHTML = await response.text();
-            placeholder.innerHTML = navHTML;
+    function loadAndSetupComponents() {
+        const navbarPlaceholder = document.getElementById('navbar-placeholder');
+        const footerPlaceholder = document.getElementById('footer-placeholder');
 
-            const footerHTML = await ftrresponse.text();
-            ftrplaceholder.innerHTML = footerHTML;
-            // Now that the navbar is in the DOM, initialize its features.
-            initializeTheme();
-            initializeNavigation();
-        } catch (error) {
-            console.error('There was a problem loading the navigation:', error);
-            placeholder.innerHTML = '<p style="color: red; text-align: center; padding: 1rem;">Failed to load navigation.</p>';
-            ftrplaceholder.innerHTML = '<p style="color: red; text-align: center; padding: 1rem;">Failed to load footer.</p>';
+        if (navbarPlaceholder) {
+            // The navHTML variable comes from nav-content.js
+            navbarPlaceholder.innerHTML = navHTML;
+        } else {
+            console.error("Fatal: Navbar placeholder element not found.");
         }
+
+        if (footerPlaceholder) {
+            // The footerHTML variable comes from footer-content.js
+            footerPlaceholder.innerHTML = footerHTML;
+        } else {
+            console.error("Fatal: Footer placeholder element not found.");
+        }
+
+        // Now that the HTML is in the DOM, initialize all the interactive parts.
+        initializeTheme();
+        initializeNavigation();
     }
-    loadAndSetupNavbar();
+
+    // Run the main function
+    loadAndSetupComponents();
+    
 
     // Landing background
     const backgroundImages = [
