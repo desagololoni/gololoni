@@ -2,7 +2,9 @@ const attractionsList = [
     {
         name: 'Trekking',
         image: 'media/img/treking.png',
-        description: 'Jelajahi keindahan alam Golo Loni melalui jalur trekking yang dikelilingi alam. Nikmati perjalanan melintasi sawah berundak yang hijau, menyeberangi sungai jernih, melewati kebun kopi dan perumahan warga, hingga menemukan air terjun yang menyegarkan.',
+        description: `Jelajahi keindahan alam Golo Loni melalui jalur trekking yang dikelilingi alam. Nikmati perjalanan melintasi sawah berundak yang hijau, menyeberangi sungai jernih, melewati kebun kopi dan perumahan warga, hingga menemukan air terjun yang menyegarkan.
+        
+Rasakan serunya menyusuri Sungai Wae Dingin yang masih asli, yang mengalir dari hutan lindung Taman Wisata Alam Ruteng. Petualangan menyusuri sungai di Golo Loni ini mengajak Anda menyelami alam yang masih alami dikelilingi oleh rimbunan pepohonan, air jernih yang mengalir, dan kicauan merdu burung burung asli. Pengunjung dapat memilih dari tiga rute pendakian: jarak pendek, sedang, dan jauh, yang disesuaikan dengan tingkat stamina dan waktu yang berbeda. Pilihan yang sempurna bagi pecinta alam dan pencari petualangan yang mencari pelarian yang damai namun menyegarkan`,
         galleryImages: [
             'media/img/treking.png',
             'media/img/trek1.jpg',
@@ -18,7 +20,7 @@ const attractionsList = [
     {
         name: 'River Tubing',
         image: 'media/img/rivertubbing.jpg',
-        description: 'Rasakan petualangan seru dan ekstrim dengan menyusuri aliran sungai jernih di Golo Loni menggunakan ban. Nikmati sensasi meluncur di atas air, melewati jeram-jeram kecil, dan dikelilingi oleh hijaunya pepohonan serta udara segar. Berani mencoba?',
+        description: 'RasRiver tubing merupakan salah satu wisata alam yang ditawarkan oleh Sungai Wae Dingin di Desa Golo Loni. Kegiatan ini memanfaatkan aliran sungai yang tenang dan jernih, dengan menggunakan ban dalam berukuran sedang sebagai sarana transportasi alami. Saat menyusuri rute yang mengikuti arus yang tenang, pengunjung akan disuguhi pemandangan alam yang masih alami, pepohonan rindang di sepanjang tepian sungai, burung-burung yang terbang di atas kepala, dan suara aliran air yang menenangkan. Suasana yang damai menjadikan river tubing sebagai perpaduan ideal antara petualangan ringan dan relaksasi.',
         galleryImages: [
             'media/img/rivertubbing.jpg',
             'media/img/rivertubbing2.jpeg',
@@ -47,7 +49,7 @@ const attractionsList = [
     {
         name: 'Bird Watching',
         image: 'media/img/birdwatching.jpg',
-        description: 'Golo Loni adalah surga bagi para pengamat burung. Bawa teropong Anda dan bersiaplah untuk mengamati berbagai jenis burung endemik dan migran di habitat aslinya. Ditambah lokasinya yang dekat dengan Danau Rana Mese, menambah keindahan pengalaman bird watching Anda.',
+        description: ' Danau Rana Mese di Desa Golo Loni merupakan tempat yang tepat untuk mengamati burung dan memotret burung. Terletak di dalam Taman Wisata Alam Ruteng, danau ini dikelilingi oleh hutan yang sejuk dan mudah dijangkau dari jalan raya Trans Flores. Waktu terbaik untuk mengamati burung adalah pagi hari, sebelum matahari terbit. Saat langit mulai cerah, lebih banyak burung mulai berkicau, seperti Burung Kingfisher berdada putih, Pitta anggun, dan Burung Sariawan berpunggung kastanye. Salah satu burung yang paling terkenal di sini adalah Burung Whistler berleher jenjang, yang dikenal karena kicauannya yang keras dan indah.',
         galleryImages: [
             'media/img/birdwatching.jpg',
             'media/img/danau2.jpg',
@@ -61,7 +63,7 @@ const attractionsList = [
     {
         name: 'Golo Depet',
         image: 'media/img/golodepet.jpg',
-        description: 'Taklukkan puncak bukit Golo Depet dan saksikan panorama matahari terbit atau terbenam yang paling spektakuler. Dari puncak, Anda bisa melihat hamparan lembah, desa-desa di kejauhan, dan langit yang berubah warna menjadi lukisan alam. Disetai dengan banyak spot foto dan dekorasi.',
+        description: 'Dikenal juga sebagai Bukit Kunang-kunang, Golo Depet menawarkan pemandangan sawah terasering dan perbukitan hijau yang memukau. Dilengkapi dengan pondok-pondok tradisional, tenda foto, dan papan kutipan estetik, tempat ini adalah tempat yang tepat untuk bersantai dan mengabadikan momen-momen indah.',
         galleryImages: [
             'media/img/golodepet.jpg',
             'media/img/golodepet2.jpg',
@@ -74,9 +76,9 @@ const attractionsList = [
         ]
     },
     {
-        name: 'Waterfall',
+        name: 'Air Terjun',
         image: 'media/img/airterjun.jpeg',
-        description: 'Temukan kesegaran di bawah gemuruh air terjun alami Golo Loni. Airnya yang jernih dan dingin langsung dari pegunungan adalah tempat yang sempurna untuk bermain air, berenang, atau sekadar duduk bersantai menikmati kekuatan airnya.',
+        description: 'Temu Tersembunyi di tengah rimbunnya hutan, Air Terjun Golo Loni menawarkan ketenangan dengan airnya yang jernih dan kolam alami yang menyegarkan. Dikelilingi oleh pepohonan hijau tropis, tempat ini adalah tempat yang sempurna untuk bersantai, berendam, atau sekadar menikmati keindahan dan ketenangan alam.',
         galleryImages: [
             'media/img/airterjun.jpeg',
             'media/img/airterjun2.jpg'
@@ -88,13 +90,27 @@ const attractionsList = [
         ]
     },
     {
-        name: 'Tarian Caci',
+        name: 'Tarian Caci (Seruan Perang)',
         image: 'media/img/tarian2.png',
-        description: 'Saksikan Tarian Caci, sebuah tarian perang tradisional NTT Manggarai yang penuh energi dan makna. Tarian ini merupakan perpaduan antara tarian perang dan permainan rakyat, yang dimainkan oleh dua orang laki-laki yang bertarung menggunakan cambuk dan perisai sebagai simbol keberanian dan sportivitas, kekompakan dan kehormatan',
+        description: 'Tari Caci mengandung makna simbolis yang menggambarkan kejantanan, kemeriahan, kemegahan, dan sportivitas. Kata "Ca" berarti "satu" dan "Ci" berarti "ujian," yang berarti pertarungan satu lawan satu. Dalam pertunjukannya, seorang penari yang bersenjatakan larik (cambuk) bertindak sebagai penyerang, sementara yang lain bertahan menggunakan nggiling (perisai). Tari ini biasanya dilakukan selama upacarasyukuran panen (Hang Woja) dan ritual adat besar lainnya.',
         galleryImages: [
             'media/img/tarian2.png',
             'media/img/tarian3.png',
             'media/img/tarian.png',
+        ],
+        highlights: [
+            '<strong>Warisan Budaya Otentik:</strong> Melihat langsung salah satu tradisi paling ikonik dari budaya Manggarai yang masih dilakukan turun-menurun.',
+            '<strong>Atraksi Penuh Adrenalin:</strong> Ketangkasan para penari dalam menyerang dan bertahan akan membuat Anda terpukau dan heran.',
+            '<strong>Makna Filosofis Mendalam:</strong> Pelajari tentang simbolisme di balik setiap gerakan, kostum, dan alat yang digunakan dalam tarian.'
+        ]
+    },
+    {
+        name: 'Tari Danding (Lingkaran Besar)',
+        image: 'media/img/taridanding2.webp',
+        description: 'Tari Danding merupakan tarian tradisional dari Manggarai, Nusa Tenggara Timur yang ditampilkan sebagai ritual rasa syukur atas hasil panen yang melimpah. Tari ini biasanya digelar saat perayaan panen (hang woja), ritual tahun baru (penti), atau upacara penting lainnya, dan juga untuk menyambut tamu kehormatan. Tarian ini dipentaskan pada malam hari, dengan para peserta membentuk lingkaran, saling berpegangan bahu atau berpelukan, dan bergerak mengikuti irama dengan mengangkat dan menghentakkan kaki. Seorang pemimpin yang disebut Kepala Nggejang berdiri di tengah, memandu tarian dengan alunan lagu dan alat musik tradisional yang disebut giring-giring. Tarian ini mencerminkan persatuan, kegembiraan, dan semangat kekeluargaan.',
+        galleryImages: [
+            'media/img/taridanding2.webp',
+            'media/img/taridanding1.jpg',
         ],
         highlights: [
             '<strong>Warisan Budaya Otentik:</strong> Melihat langsung salah satu tradisi paling ikonik dari budaya Manggarai yang masih dilakukan turun-menurun.',
@@ -121,7 +137,7 @@ const attractionsList = [
     {
         name: 'Menganyam Tikar',
         image: 'media/img/tikar3.jpg',
-        description: 'Ikuti aktifitas menganyam tikar bersama para pengrajin lokal. Anda akan diajari langkah demi langkah, mulai dari persiapan hingga membentuk pola-pola tradisional yang indah. Bawa pulang hasil karya Anda sendiri!',
+        description: 'Menenun tikar merupakan tradisi yang diwariskan turun-temurun oleh para wanita Golo Loni. Keterampilan ini mencerminkan warisan desa dan nilai nilai kesabaran serta kebersamaan yang telah dijunjung tinggi selama bertahun-tahun. Pengunjung diundang untuk bergabung dan mempelajari kerajinan membuat tikar bersama penduduk setempat, merasakan kehangatan dan keramahtamahan yang membuat Golo Loni benar-benar istimewa.',
         galleryImages: [
             'media/img/tikar3.jpg',
             'media/img/tikar2.jpg',
@@ -149,7 +165,7 @@ const attractionsList = [
     {
         name: 'Mancing',
         image: 'media/img/mancing.jpeg',
-        description: 'Uji keberuntungan dan kesabaran Anda dengan memancing di kolam-kolam ikan milik masyarakat. Ikan hasil tangkapan bisa langsung ditimbang untuk dibawa pulang sebagai oleh-oleh segar, atau dinikmati langsung dengan dibakar di tempat.',
+        description: 'Memancing di Golo Loni menawarkan pengalaman yang damai dan unik. Terletak di tengah hamparan sawah yang rimbun dan eksotis, kegiatan ini tidak hanya menghadirkan keseruan dalam menangkap ikan, tetapi juga memanjakan mata dengan panorama pedesaan yang menakjubkan. Ini adalah cara sempurna untuk bersantai, melepas penat, dan kembali terhubung dengan keindahan alam desa.',
         galleryImages: [
             'media/img/mancing.jpeg',
             'media/img/mancing2.jpg',
@@ -163,9 +179,21 @@ const attractionsList = [
         ]
     },
     {
+        name: 'Menanam Padi',
+        image: 'media/img/tanampadi.jpg',
+        description: 'Rasakan serunya menjadi petani sehari di tengah pesona alam Golo Loni. Pengunjung diajak langsung turun ke sawah untuk menanam, memanen, dan belajar metode pertanian tradisional bersama para petani lokal. Dikelilingi oleh lanskap yang hijau dan menenangkan, pengalaman ini cocok untuk semua usia yang ingin merasakan hangatnya kehidupan desa dari dekat.',
+        galleryImages: [
+            'media/img/tanampadi.jpg',
+        ],
+        highlights: [
+            '<strong>Belajar Pertanian Tradisional:</strong> Dapatkan wawasan mendalam tentang metode pertanian yang telah diwariskan dari generasi ke generasi.',
+            '<strong>Pengalaman Edukatif untuk Semua Usia:</strong> Aktivitas ini dirancang untuk menyenangkan dan mendidik bagi pengunjung dari segala usia.'
+        ]
+    },
+    {
         name: 'Flying Fox',
         image: 'media/img/flyingfox1.jpeg',
-        description: 'Rasakan adrenalin dengan meluncur di atas ketinggian menggunakan flying fox! Lintasan udara ini akan membawa Anda terbang di atas hamparan sawah, memberikan pemandangan tinggi yang menakjubkan.',
+        description: 'Bagi para pencari adrenalin, flying fox di Golo Loni adalah petualangan yang wajib dicoba. Meluncur dari ketinggian 10 meter menyusuri lintasan sepanjang 130 meter yang membentang di atas hamparan sawah yang rimbun dan eksotis. Dalam waktu sekitar satu menit, wahana mendebarkan ini akan meninggalkan kesan yang tak terlupakan.',
         galleryImages: [
             'media/img/flyingfox1.jpeg',
             'media/img/flyingfox2.jpeg',
@@ -180,7 +208,7 @@ const attractionsList = [
     {
         name: 'Gua Watu Tahang',
         image: 'media/img/gua2.jpg',
-        description: 'Jelajahi misteri Gua Watu Tahang, sebuah gua alam yang terletak tepat di bawah area persawahan. Masuki dunia bawah tanah yang dihiasi formasi batuan stalaktit dan stalagmit serta tumbuhan vegetasi.',
+        description: 'Gua Watu Tahang merupakan gua alam kecil yang terletak di bawah hamparan sawah Desa Golo Loni, sekitar 1 kilometer dari jalan utama desa. Di dalamnya, pengunjung akan menemukan dinding batu kapur, stalaktit yang menggantung, dan kelelawar yang bersarang di langit-langitnya. Untuk mencapai lokasi, pengunjung dapat menikmati jalan santai selama 20 menit melalui perkebunan kopi dan hamparan sawah. Gua Watu Tahang juga direncanakan akan menjadi bagian dari rute petualangan ekologi, bersama dengan aktivitas river tubing di dekatnya.',
         galleryImages: [
             'media/img/gua2.jpg',
             'media/img/gua.jpeg',
@@ -196,7 +224,7 @@ const attractionsList = [
     {
         name: 'Bersepeda',
         image: 'media/img/sepeda3.jpg',
-        description: 'Nikmati udara segar pedesaan dengan menjelajahi Golo Loni menggunakan sepeda. Lewati perkampungan warga yang ramah, dan berhenti di setiap sudut yang indah untuk menikmati pemandangan dan berfoto.',
+        description: 'Jelajahi keindahan Golo Loni dengan bersepeda di sepanjang jalan desa yang tenang. Nikmati udara segar, hamparan sawah yang indah, dan suasana tenang yang membuat setiap kayuhan menjadi menyenangkan. Ini adalah cara yang sempurna untuk merasakan pesona desa sambil menyapa penduduk setempat yang ramah di sepanjang jalan.',
         galleryImages: [
             'media/img/sepeda3.jpg',
             'media/img/sepeda1.jpeg',
@@ -211,7 +239,7 @@ const attractionsList = [
     {
         name: 'Danau Rana Mese',
         image: 'media/img/danau1.jpg',
-        description: 'Kunjungi keindahan Danau Rana Mese, sebuah danau kawah yang tenang di tengah kawasan Hutan Lindung. Panorama alamnya yang menyejukkan mata dan suasananya yang damai menjadikannya tempat yang sempurna untuk relaksasi.',
+        description: 'Terletak di jantung hutan tropis di dalam Taman Wisata Alam, Danau Rana Mese berdiri sebagai jiwa keindahan alam Golo Loni. Perairannya yang tenang dan jernih dibalut oleh pepohonan hijau yang rimbun, menciptakan suasana yang tenteram dan spiritual. Pengunjung dapat berjalan jalan santai di sekitar danau, mengambil foto pemandangan, atau sekadar menikmati ketenangan alam. Bagi penggemar ekowisata, danau ini juga berfungsi sebagai habitat bagi berbagai spesies burung langka.',
         galleryImages: [
             'media/img/danau1.jpg',
             'media/img/danau2.jpg',
@@ -226,7 +254,7 @@ const attractionsList = [
     {
         name: 'Adopsi Bambu',
         image: 'media/img/bambu1.jpeg',
-        description: 'Ikut serta dalam pelestarian lingkungan melalui program Adopsi Bambu. Ini adalah wisata edukasi yang mengajak Anda terlibat aktif dalam konservasi tumbuhan.',
+        description: 'Program Tanam Bambu mengajak pengunjung untuk mengambil bagian dalam kegiatan ramah lingkungan dengan menanam bambu di Golo Loni. Inisiatif ini membantu mencegah erosi, mendukung konservasi udara, dan memajukan lanskap yang lebih hijau. Bekerja sama dengan Yayasan Bambu Lestari, setiap pengunjung akan dibimbing oleh fasilitator lokal untuk berlatih menanam bambu di area yang ditentukan. Setelah informasi kembali ke rumah, mereka akan menerima benua ini secara berkala tentang pertumbuhan bambu yang mereka adopsi. Lebih dari sekedar kegiatan, ini merupakan langkah yang berarti pembangunan menuju desa wisata yang berkelanjutan dan hijau.',
         galleryImages: [
             'media/img/bambu1.jpeg',
             'media/img/bambu2.jpeg',
@@ -259,7 +287,7 @@ const attractionsList = [
 let currentImageIndex = 0;
 let currentAttractionImages = [];
 
-window.onload = function() {
+window.onload = function () {
     const urlParams = new URLSearchParams(window.location.search);
     const attractionId = parseInt(urlParams.get('id'), 10);
 
@@ -271,7 +299,7 @@ window.onload = function() {
     const thumbnailGallery = document.getElementById('thumbnail-gallery');
     const prevButton = document.getElementById('prev-image');
     const nextButton = document.getElementById('next-image');
-    
+
     // ✨ NEW: Get highlight elements
     const highlightsContainer = document.getElementById('attraction-highlights');
     const highlightsList = document.getElementById('highlights-list');

@@ -16,8 +16,8 @@ const navHTML = `
                             class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
                     <ul class="dropdown-menu" role="menu">
                         <li role="menuitem"><a href="about.html" class="dropdown-link">Tentang Desa</a></li>
-                        <li role="menuitem"><a href="about.html#maps" class="dropdown-link">Peta</a></li>
-                        <li role="menuitem"><a href="about.html#galeriAbout" class="dropdown-link">Galeri</a></li>
+                        <li role="menuitem"><a href="about.html#map" class="dropdown-link">Peta</a></li>
+                        <li role="menuitem"><a href="about.html#gallery" class="dropdown-link">Galeri</a></li>
                     </ul>
                 </li>
                 <li class="nav-item has-dropdown">
@@ -94,10 +94,10 @@ const footerHTML = `
                     <h3 class="footer-section-title">Navigasi</h3>
                     <nav class="footer-nav">
                         <a href="index.html" class="footer-nav-link">Beranda</a>
-                        <a href="index.html#about" class="footer-nav-link">Tentang Kami</a>
+                        <a href="about.html" class="footer-nav-link">Tentang Kami</a>
                         <a href="index.html#attraction" class="footer-nav-link">Atraksi</a>
-                        <a href="index.html#packages" class="footer-nav-link">Paket Wisata</a>
-                        <a href="about.html#galeriAbout" class="footer-nav-link">Galeri</a>
+                        <a href="index.html#paket" class="footer-nav-link">Paket Wisata</a>
+                        <a href="about.html#gallery" class="footer-nav-link">Galeri</a>
                     </nav>
                 </div>
 
@@ -338,18 +338,20 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'River Camp', image: 'media/img/rivercamp.jpeg', description: 'Habiskan malam di tepi sungai dan di tengah alam, berkemah di bawah bintang dengan suara alam.' },
         { name: 'Bird Watching', image: 'media/img/birdwatching.jpg', description: 'Amati berbagai jenis burung endemik dan migran di habitat aslinya. Sebuah surga bagi para pecinta ornitologi.' },
         { name: 'Golo Depet', image: 'media/img/golodepet.jpg', description: 'Saksikan pemandangan matahari terbit atau terbenam yang spektakuler dari puncak bukit Golo Depet.' },
-        { name: 'Waterfall', image: 'media/img/airterjun.jpeg', description: 'Segarkan diri dengan bermain air di bawah gemuruh air terjun yang jernih dan alami.' },
-        { name: 'Tarian Caci', image: 'media/img/tarian2.png', description: 'Saksikan tarian perang tradisional yang penuh energi dan makna budaya, sebuah pertunjukan seni yang memukau.' },
+        { name: 'Air Terjun', image: 'media/img/airterjun.jpeg', description: 'Segarkan diri dengan bermain air di bawah gemuruh air terjun yang jernih dan alami.' },
+        { name: 'Tarian Caci', image: 'media/img/tarian2.png', description: 'Saksikan tarian perang tradisional NTT yang penuh makna budaya, dilakukan selama upacarasyukuran panen dan ritual adat besar lainnya.' },
+        { name: 'Tari Danding', image: 'media/img/taridanding2.webp', description: 'Tarian tradisional dari Manggarai, NTT yang ditampilkan sebagai ritual rasa syukur atas hasil panen yang melimpah.' },
         { name: 'Ritual Penti', image: 'media/img/penti2.jpg', description: 'Ikuti upacara adat Penti, sebuah ritual syukur atas hasil panen yang kaya akan nilai-nilai budaya lokal.' },
         { name: 'Menganyam Tikar', image: 'media/img/tikar3.jpg', description: 'Belajar seni menganyam tikar dari para pengrajin lokal. Setiap proses diajari dan diberi arahan jelas.' },
         { name: 'Membuat Tuak', image: 'media/img/tuak.jpeg', description: 'Lihat langsung proses pembuatan tuak, minuman tradisional dari fermentasi nira aren, dan cicipi rasanya yang khas.' },
-        { name: 'Mancing', image: 'media/img/mancing.jpeg', description: 'Uji keberuntungan dan kesabaran Anda dengan memancing di danau atau sungai yang kaya akan ikan, di mana atraksi ini dilakukan di setiap kolam ikan yang telah disediakan oleh masyarakat dan ikan hasil tangkapan dapat ditimbang untuk dibawa pulang atau dinikmati langsung di tempat.' },
-        { name: 'Flying Fox', image: 'media/img/flyingfox1.jpeg', description: 'Rasakan adrenalin terpacu saat meluncur dari ketinggian dengan flying fox sepanjang 200 meter di atas persawahan masyarakat setempat, melintasi lembah dengan pemandangan indah dan sensasi alam persawahan yang menakjubkan.' },
-        { name: 'Gua Watu Tahang', image: 'media/img/gua2.jpg', description: 'Jelajahi misteri Gua Watu Tahang, sebuah gua alam dengan formasi batuan stalaktit dan stalagmit yang unik yang terletak tepat di bawah persawahan masyarakat, di dalamnya terdapat banyak batu kapur dan dialiri air yang bersumber dari mata air.' },
+        { name: 'Mancing', image: 'media/img/mancing.jpeg', description: 'Memancing di kolam yang kaya akan ikan, di mana ikan hasil tangkapan dapat dinikmati langsung di tempat.' },
+        { name: 'Menanam Padi', image: 'media/img/tanampadi.jpg', description: 'Belajar menanam padi dengan petani lokal di sawah yang subur, sambil menikmati keindahan alam sekitar.' },
+        { name: 'Flying Fox', image: 'media/img/flyingfox1.jpeg', description: 'Rasakan adrenalin saat meluncur dari ketinggian 10 meter dengan flying fox sepanjang 130 meter di atas persawahan masyarakat setempat.' },
+        { name: 'Gua Watu Tahang', image: 'media/img/gua2.jpg', description: 'Jelajahi Gua Watu Tahang, temukanlah dinding batu kapur, stalaktit yang menggantung, dan kelelawar yang bersarang di langit-langitnya.' },
         { name: 'Bersepeda', image: 'media/img/sepeda3.jpg', description: 'Nikmati udara segar pedesaan dengan bersepeda menyusuri jalan setapak, persawahan, dan perkampungan warga.' },
-        { name: 'Danau Rana Mese', image: 'media/img/danau1.jpg', description: 'Kunjungi keindahan Danau Rana Mese, sebuah danau kawah yang tenang dengan panorama alam yang menyejukkan mata, terletak di kawasan Hutan Lindung dan menjadi sumber air minum untuk masyarakat Golo Loni khususnya serta masyarakat Kabupaten Manggarai Timur umumnya.' },
-        { name: 'Adopsi Bambu', image: 'media/img/bambu1.jpeg', description: 'Nikmati wisata edukasi yang mengajak Anda untuk terlibat aktif dalam konservasi. Dengan mengadopsi rumpun bambu, Anda turut serta menjaga kelestarian lingkungan. Pertumbuhan tanaman Anda akan di-update secara berkala sebagai bukti nyata kontribusi Anda.' },
-        { name: 'Produksi Kopi & Aren', image: 'media/img/kopi.jpg', description: 'Belajar langsung dari para petani bagaimana biji kopi dan nira aren dipanen, diolah, hingga menjadi produk siap saji seperti kopi nikmat dan gula aren. Atraksi wisata ini akan membawa Anda melihat seluruh prosesnya, dari bahan mentah hingga produk akhir, memberikan wawasan mendalam yang tak terlupakan. ' }
+        { name: 'Danau Rana Mese', image: 'media/img/danau1.jpg', description: 'Danau Rana Mese berdiri sebagai jiwa keindahan alam Golo Loni. Perairannya yang tenang dan jernih dibalut oleh pepohonan hijau yang rimbun.' },
+        { name: 'Adopsi Bambu', image: 'media/img/bambu1.jpeg', description: 'Nikmati wisata edukasi yang mengajak Anda untuk mengadopsi rumpun bambu untuk ditanam ditempat.' },
+        { name: 'Produksi Kopi & Aren', image: 'media/img/kopi.jpg', description: 'Belajar dari warga lokal bagaimana biji kopi dan nira aren dipanen, diolah, hingga menjadi produk siap saji.' }
     ];
 
     const AttractionGallery = document.getElementById('AttractionGallery');

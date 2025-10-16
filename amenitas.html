@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,31 +59,51 @@
             margin: 0;
             /* Padding moved from body to the main content section */
         }
-        
+
         main {
             padding: 1rem;
         }
+
         @media (min-width: 768px) {
-            main { padding: 2rem; }
+            main {
+                padding: 2rem;
+            }
         }
+
         @media (min-width: 1024px) {
-            main { padding: 3rem; }
+            main {
+                padding: 3rem;
+            }
         }
 
         /* Responsive Typography */
-        .text-xxl { font-size: var(--fontXXL); }
-        .text-xl { font-size: var(--fontXL); }
-        .text-l { font-size: var(--fontL); }
-        .text-m { font-size: var(--fontM); }
-        .text-s { font-size: var(--fontS); }
-        
+        .text-xxl {
+            font-size: var(--fontXXL);
+        }
+
+        .text-xl {
+            font-size: var(--fontXL);
+        }
+
+        .text-l {
+            font-size: var(--fontL);
+        }
+
+        .text-m {
+            font-size: var(--fontM);
+        }
+
+        .text-s {
+            font-size: var(--fontS);
+        }
+
         /* General Layout & Section Styling */
         .amenitas-section {
             max-width: 80rem;
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .amenitas-subsection {
             margin-bottom: 4rem;
         }
@@ -105,7 +126,7 @@
             border-left: 4px solid var(--secondary);
             padding-left: 0.75rem;
         }
-        
+
         /* Accommodation Card */
         .accommodation-card {
             background-color: var(--bg-box);
@@ -117,28 +138,11 @@
         .accommodation-card-image {
             position: relative;
         }
-        
+
         .accommodation-card-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-        }
-
-        .accommodation-card-title-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            padding: 1rem;
-            background-color: rgba(0, 0, 0, 0.4);
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .accommodation-card-title-overlay h3 {
-            font-size: var(--fontL);
-            font-weight: 600;
-            color: white;
-            margin: 0;
         }
 
         .accommodation-card-details {
@@ -166,7 +170,7 @@
             align-items: center;
             font-size: var(--fontS);
         }
-        
+
         .feature-item i {
             font-size: 1.1rem;
             width: 1.25rem;
@@ -193,7 +197,7 @@
             margin: 0;
             font-weight: 600;
         }
-        
+
         .availability-info span {
             color: var(--primary);
         }
@@ -213,6 +217,7 @@
             color: var(--secondary-hover);
             line-height: 1;
         }
+
         .price-block .price-value p {
             margin: 0;
         }
@@ -233,9 +238,9 @@
             border: none;
             cursor: pointer;
             transition: background-color 0.2s;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
         }
-        
+
         .cta-button:hover {
             background-color: var(--secondary-hover);
         }
@@ -251,14 +256,14 @@
             background-color: var(--primary);
             padding: 1.25rem;
             border-radius: 0.75rem;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             transition: transform 0.3s ease-in-out;
         }
-        
+
         .facility-item:hover {
             transform: scale(1.02);
         }
@@ -271,7 +276,7 @@
             color: var(--text-color);
             margin-bottom: 0.75rem;
         }
-        
+
         .facility-item p {
             margin: 0;
             font-size: var(--fontS);
@@ -291,7 +296,7 @@
             box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color);
             overflow: hidden;
         }
-        
+
         .content-card img {
             width: 100%;
             aspect-ratio: 16/9;
@@ -309,7 +314,7 @@
             margin-top: 0;
             margin-bottom: 0.5rem;
         }
-        
+
         .content-card p {
             font-size: var(--fontS);
             color: var(--text-secondary);
@@ -327,7 +332,7 @@
             cursor: pointer;
             transition: color 0.2s;
         }
-        
+
         .content-card-button:hover {
             color: var(--secondary-hover);
         }
@@ -337,20 +342,25 @@
             .subsection-heading {
                 margin-bottom: 2rem;
             }
+
             .accommodation-card {
                 display: flex;
                 height: 24rem;
             }
+
             .accommodation-card-image,
             .accommodation-card-details {
                 width: 50%;
             }
+
             .accommodation-card-details {
                 padding: 2rem;
             }
+
             .facilities-grid {
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             }
+
             .content-grid {
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             }
@@ -363,6 +373,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="navbar-placeholder"></div>
 
@@ -372,19 +383,26 @@
 
             <div id="akomodasi" class="amenitas-subsection">
                 <h2 class="subsection-heading">Homestay</h2>
-                
+
                 <div class="accommodation-card">
                     <div class="accommodation-card-image">
-                        <img src="media/img/homestay2.jpeg" alt="Charlie Homestay">
-                        <div class="accommodation-card-title-overlay">
-                            <h3>Charlie's Homestay</h3>
-                        </div>
+                        <img src="media/img/hsCharlie.png" alt="Charlie Homestay">
                     </div>
 
                     <div class="accommodation-card-details">
                         <div>
-                            <p class="description">Homestay yang nyaman dengan pemandangan alam yang menenangkan.</p>
-                            
+                            <p class="description">Charlie's Homestay menawarkan
+                                penginapan yang hangat dan nyaman di
+                                jantung Golo Loni. Dengan dua kamar
+                                pribadi yang dapat menampung hingga
+                                empat tamu, setiap kamar dilengkapi
+                                kamar mandi sendiri untuk menambah
+                                kenyamanan. Pilihan yang damai dan
+                                nyaman bagi wisatawan yang ingin
+                                merasakan keramahtamahan lokal dari
+                                dekat.
+                            </p>
+
                             <div class="features-grid">
                                 <div class="feature-item">
                                     <i class="fa-solid fa-wifi"></i>
@@ -400,7 +418,7 @@
                                 </div>
                                 <div class="feature-item">
                                     <i class="fa-solid fa-users"></i>
-                                    <span>Maks. 4 Orang</span>
+                                    <span>Untuk 4 Orang</span>
                                 </div>
                             </div>
 
@@ -421,11 +439,93 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                <div class="accommodation-card">
+                    <div class="accommodation-card-image">
+                        <img src="media/img/hsAnggrek.png" alt="Charlie Homestay">
+                    </div>
+
+                    <div class="accommodation-card-details">
+                        <div>
+                            <p class="description">Penginapan yang nyaman ini memiliki satu
+                                kamar pribadi yang ideal untuk dua tamu,
+                                cocok untuk pasangan atau pelancong
+                                solo yang mencari tempat peristirahatan
+                                yang tenang. Kelambu tersedia atas
+                                permintaan, terutama berguna saat malam
+                                hari yang dingin. Kamar mandi terletak
+                                terpisah dari kamar tidur, menawarkan
+                                penginapan yang sederhana namun
+                                nyaman dengan sentuhan kehangatan dan
+                                keramahtamahan lokal.
+                            </p>
+
+                            <div class="availability-info">
+                                <p>Unit Tersedia: <span>-</span></p>
+                                <p>Kapasitas: <span>2 Orang</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="accommodation-card">
+                    <div class="accommodation-card-image">
+                        <img src="media/img/hsMelati.png" alt="Charlie Homestay">
+                    </div>
+
+                    <div class="accommodation-card-details">
+                        <div>
+                            <p class="description">Penginapan Melati menyediakan tempat
+                                yang tenang dan nyaman dengan satu
+                                kamar tamu yang cocok untuk dua orang.
+                                Kamarnya sederhana namun nyaman,
+                                dengan kamar mandi terpisah untuk
+                                digunakan tamu. Atas permintaan, tuan
+                                rumah menyediakan kelambu yang sangat
+                                berguna saat malam yang dingin. Ideal
+                                bagi wisatawan yang mencari tempat
+                                menginap yang tenang dengan sentuhan
+                                pesona lokal.</p>
+
+                            <div class="availability-info">
+                                <p>Unit Tersedia: <span>-</span></p>
+                                <p>Kapasitas: <span>2 Orang</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="accommodation-card">
+                    <div class="accommodation-card-image">
+                        <img src="media/img/hsBougen.png" alt="Charlie Homestay">
+                    </div>
+
+                    <div class="accommodation-card-details">
+                        <div>
+                            <p class="description">Bougenville Homestay adalah tempat
+                                menginap yang bersih dan nyaman,
+                                hanya beberapa langkah dari jalan
+                                utama Trans Flores. Tuan rumahnya
+                                baik dan ramah, membuat tamu
+                                merasa seperti di rumah sendiri.
+                                Dengan lingkungan yang aman dan
+                                tenang, tempat ini adalah tempat yang
+                                sempurna untuk bersantai dan
+                                menikmati waktu Anda di Golo Loni.</p>
+
+
+                            <div class="availability-info">
+                                <p>Unit Tersedia: <span>-</span></p>
+                                <p>Kapasitas: <span>4 Orang</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="fasilitas" class="amenitas-subsection">
                 <h2 class="subsection-heading">Fasilitas Desa</h2>
-                
+
                 <div class="facilities-grid">
                     <div class="facility-item">
                         <i class="fa-solid fa-road"></i>
@@ -492,111 +592,162 @@
 
             <div id="transportasi" class="amenitas-subsection">
                 <h2 class="subsection-heading">Transportasi Lokal</h2>
-                
+
                 <div class="content-grid">
                     <div class="content-card">
                         <img src="media/img/bemo.jpg" alt="Bemo Lokal">
                         <div class="content-card-body">
                             <h3>Bemo</h3>
-                            <p>Angkutan umum yang ada di NTT, menghubungkan berbagai daerah dengan harga tawar-menawar dan layanan siap jalan.</p>
+                            <p>Angkutan umum yang ada di NTT, menghubungkan berbagai daerah dengan harga tawar-menawar
+                                dan layanan siap jalan.</p>
                         </div>
                     </div>
                     <div class="content-card">
                         <img src="media/img/travel.jpg" alt="Van Transport">
                         <div class="content-card-body">
                             <h3>Sewa Travel Van</h3>
-                            <p>Layanan sewa mobil van untuk perjalanan wisatawan, menawarkan kenyamanan dan fleksibilitas dalam menjelajahi Desa Wisata Golo Loni dan sekitarnya.</p>
+                            <p>Layanan sewa mobil van untuk perjalanan wisatawan, menawarkan kenyamanan dan
+                                fleksibilitas dalam menjelajahi Desa Wisata Golo Loni dan sekitarnya.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div id="kuliner" class="amenitas-subsection">
                 <h2 class="subsection-heading">Kuliner Lokal</h2>
-                
+
                 <div class="content-grid">
                     <div class="content-card">
-                        <img src="media/img/pegagan2.png" alt="Pegagan">
+                        <img src="media/img/ikanasam.png">
                         <div class="content-card-body">
-                            <h3>Keripik Pegagan</h3>
-                            <p>Keripik Pegagan adalah camilan renyah yang terbuat dari daun pegagan, menawarkan cita rasa gurih unik sekaligus manfaat herbal yang menyegarkan</p>
+                            <h3>Ikan Kuah Asam</h3>
+                            <p>Hidangan khas Manggarai Timur, ikan kuah
+                                asam adalah sup ikan pedas yang dibuat
+                                dengan hasil tangkapan lokal segar, air jeruk
+                                nipis, tomat, dan rempah-rempah aromatik.
+                                Ringan, segar, dan hangat, hidangan ini
+                                menangkap jiwa Manggarai dalam setiap
+                                sendoknya</p>
                         </div>
                     </div>
                     <div class="content-card">
-                        <img src="media/img/talas.jpeg" alt="Pegagan">
+                        <img src="media/img/rumpu.png">
+                        <div class="content-card-body">
+                            <h3>Rumpu Rampe</h3>
+                            <p>Rumpu rampe adalah hidangan tumis sayur
+                                tradisional Manggarai yang terbuat dari daun
+                                pepaya muda, bunga, dan cabai. Ditumis dengan
+                                bawang putih dan bawang merah, hidangan ini
+                                menawarkan rasa yang kuat dan sedikit pahit
+                                yang diimbangi dengan rempah-rempah yang
+                                harum</p>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <img src="media/img/pegagan2.png">
+                        <div class="content-card-body">
+                            <h3>Keripik Pegagan</h3>
+                            <p>Keripik Pegagan adalah camilan renyah yang terbuat dari daun pegagan, menawarkan cita
+                                rasa gurih unik sekaligus manfaat herbal yang menyegarkan</p>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <img src="media/img/talas.jpeg">
                         <div class="content-card-body">
                             <h3>Teko Taro</h3>
                             <p>Teko Taro adalah keripik yang terbuat dari olahan umbi talas</p>
                         </div>
                     </div>
                     <div class="content-card">
-                        <img src="media/img/Fried-cassava.jpg" alt="Teh Bambu">
-                        <div class="content-card-body">
-                            <h3>Fried Cassava</h3>
-                            <p>Cemilan lezat dan mengenyangkan berupa singkong goreng</p>
-                        </div>
-                    </div>
-                    <div class="content-card">
-                        <img src="media/img/kokor.jpg" alt="Teh Bambu">
-                        <div class="content-card-body">
-                            <h3>Teko Kokor (Talas)</h3>
-                            <p>Makanan jenis umbi-umbian yang kaya karbohidrat</p>
-                        </div>
-                    </div>
-                    <div class="content-card">
-                        <img src="media/img/burjo.jpg" alt="Teh Bambu">
+                        <img src="media/img/burjo.jpg">
                         <div class="content-card-body">
                             <h3>Bubur Kacang Hijau</h3>
                             <p>Bubur Kacang Hijau, hidangan manis yang terbuat dari kacang hijau dan santan</p>
                         </div>
                     </div>
                     <div class="content-card">
-                        <img src="media/img/kolak.jpg" alt="Teh Bambu">
+                        <img src="media/img/kolak.jpg">
                         <div class="content-card-body">
                             <h3>Kolak</h3>
-                            <p>Hidangan kuah manis berisikan olahan pisang dan ubi</p>
+                            <p>Hidangan penutup khas Indonesia yang terbuat dari gula merah atau gula kelapa, santan,
+                                dan daun pandan, seringkali dengan tambahan pisang, ubi, labu, atau kolang-kaling.</p>
                         </div>
                     </div>
                     <div class="content-card">
-                        <img src="media/img/rebok.jpeg" alt="Teh Bambu">
+                        <img src="media/img/rebok.jpeg">
                         <div class="content-card-body">
-                            <h3>Siki Seko</h3>
-                            <p>Makanan tradisional khas Manggarai, NTT, terbuat dari beras yang melewati berbagai proses pemasakan</p>
+                            <h3>Rebok</h3>
+                            <p>Rebok adalah penganan tradisional Manggarai
+                                yang terbuat dari tepung beras sangrai yang
+                                dicampur dengan parutan kelapa dan gula aren.
+                                Bahan-bahan tersebut diracik menjadi tekstur
+                                yang lembut dan rapuh dengan rasa manis alami
+                                seperti kacang. Sering disajikan saat upacara
+                                atau acara kumpul keluarga, rebok mencerminkan kehangatan dan kesederhanaan
+                                tradisi kuliner Manggarai.
+                            </p>
                         </div>
                     </div>
                     <div class="content-card">
-                        <img src="media/img/ikantawar.png" alt="Teh Bambu">
+                        <img src="media/img/ikantawar.png">
                         <div class="content-card-body">
                             <h3>Ikan Bakar</h3>
-                            <p>Ikan hasil pancing yang dipanggang dengan tambahan bumbu dan kecap</p>
+                            <p>Ikan hasil pancingan yang dapat langsung dihidangkan dengan dipanggang dengan tambahan
+                                bumbu dan kecap</p>
                         </div>
                     </div>
                     <div class="content-card">
-                        <img src="media/img/coffee.jpg" alt="Teh Bambu">
+                        <img src="media/img/abonikan.jpg">
+                        <div class="content-card-body">
+                            <h3>Abon Ikan</h3>
+                            <p>Di tengah suburnya lahan dan melimpahnya kolam ikan tawar di Golo Loni, lahirlah
+                                sebuah inovasi kuliner yang menjadi kebanggaan baru masyarakat desa. Makanan
+                                tradisional ini diolah dari ikan segar hasil budidaya lokal yang dibumbui dengan
+                                rempah khas dan dimasak perlahan hingga menghasilkan abon yang gurih, kering,
+                                dan tahan lama.</p>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <img src="media/img/coffee.jpg">
                         <div class="content-card-body">
                             <h3>Kopi Hitam Golo Loni</h3>
                             <p>Seduhan kopi hitam murni yang pahit dan panas, olahan langsung dari penduduk lokal</p>
                         </div>
                     </div>
                     <div class="content-card">
-                        <img src="media/img/tehbambu2.webp" alt="Teh Bambu">
+                        <img src="media/img/tehbambu2.webp">
                         <div class="content-card-body">
                             <h3>Teh Bambu</h3>
                             <p>Teh Bambu, minuman herbal alami dengan aroma segar bambu yang menenangkan</p>
                         </div>
                     </div>
                     <div class="content-card">
-                        <img src="media/img/saritemulawak.webp" alt="Teh Bambu">
+                        <img src="media/img/saritemulawak.webp">
                         <div class="content-card-body">
                             <h3>Sari Temulawak</h3>
                             <p>Minuman herbal dari olahan sari temulawak</p>
                         </div>
                     </div>
                     <div class="content-card">
-                        <img src="media/img/wedangjahe.jpg" alt="Teh Bambu">
+                        <img src="media/img/wedangjahe.jpg">
                         <div class="content-card-body">
                             <h3>Wedang Jahe</h3>
                             <p>Minuman berkhasiat dari olahan sari jahe</p>
+                        </div>
+                    </div>
+                    <div class="content-card">
+                        <img src="media/img/tuak2.jpg">
+                        <div class="content-card-body">
+                            <h3>Tuak (moke)</h3>
+                            <p>Moke adalah minuman khas yang terbuat dari
+                                fermentasi nira atau enau dan diolah secara
+                                tradisional . Proses pembuatannya dilakukan
+                                dengan penuh ketelatenan mulai dari
+                                penyadapan nira, fermentasi, hingga
+                                penyulingan yang menggunakan alat
+                                sederhana dari tanah liat dan bambu. Hasilnya
+                                adalah minuman beraroma khas dengan rasa
+                                yang kuat dan hangat di tubuh.</p>
                         </div>
                     </div>
                 </div>
@@ -607,8 +758,8 @@
     </main>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            
+        document.addEventListener('DOMContentLoaded', function () {
+
             // --- THEME INITIALIZATION ---
             function initializeTheme() {
                 const themeToggle = document.getElementById('theme-toggle');
@@ -653,10 +804,10 @@
                         if (window.innerWidth < 992) {
                             e.preventDefault();
                             const isAlreadyActive = item.classList.contains('dropdown-active');
-                            
+
                             // Close other dropdowns
                             dropdownItems.forEach(otherItem => {
-                                if(otherItem !== item) {
+                                if (otherItem !== item) {
                                     otherItem.classList.remove('dropdown-active');
                                     otherItem.querySelector('.dropdown-menu').classList.remove('active');
                                 }
@@ -680,6 +831,7 @@
             initializeNavigation();
         });
     </script>
-    
+
 </body>
+
 </html>

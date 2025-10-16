@@ -26,9 +26,9 @@
 }
 
 body.dark-mode {
-    --primary: #6bb05f;
-    --primary-hover: #88c57f;
-    --primary-light: #9ed896;
+    --primary: #609d55;
+    --primary-hover: #7aae71;
+    --primary-light: #8dc486;
 
     --secondary: #e91f1f;
     --secondary-hover: #ff4444;
