@@ -26,13 +26,13 @@
 }
 
 body.dark-mode {
-    --primary: #609d55;
-    --primary-hover: #7aae71;
-    --primary-light: #8dc486;
+    --primary: #44723e;
+    --primary-hover: #375e32;
+    --primary-light: #5a854a;
 
-    --secondary: #e91f1f;
-    --secondary-hover: #ff4444;
-    --secondary-light: #ff6b6b;
+    --secondary: #ad1919;
+    --secondary-hover: #8d0000;
+    --secondary-light: #c92323;
 
     --text-color: #e8e8e8;
     --text-secondary: #b8b8b8;

@@ -106,11 +106,12 @@ Rasakan serunya menyusuri Sungai Wae Dingin yang masih asli, yang mengalir dari 
     },
     {
         name: 'Tari Danding (Lingkaran Besar)',
-        image: 'media/img/taridanding2.webp',
+        image: 'media/img/penti4.jpg',
         description: 'Tari Danding merupakan tarian tradisional dari Manggarai, Nusa Tenggara Timur yang ditampilkan sebagai ritual rasa syukur atas hasil panen yang melimpah. Tari ini biasanya digelar saat perayaan panen (hang woja), ritual tahun baru (penti), atau upacara penting lainnya, dan juga untuk menyambut tamu kehormatan. Tarian ini dipentaskan pada malam hari, dengan para peserta membentuk lingkaran, saling berpegangan bahu atau berpelukan, dan bergerak mengikuti irama dengan mengangkat dan menghentakkan kaki. Seorang pemimpin yang disebut Kepala Nggejang berdiri di tengah, memandu tarian dengan alunan lagu dan alat musik tradisional yang disebut giring-giring. Tarian ini mencerminkan persatuan, kegembiraan, dan semangat kekeluargaan.',
         galleryImages: [
-            'media/img/taridanding2.webp',
-            'media/img/taridanding1.jpg',
+            'media/img/penti4.jpg',
+            'media/img/penti5.jpg',
+            'media/img/penti2.jpg',
         ],
         highlights: [
             '<strong>Warisan Budaya Otentik:</strong> Melihat langsung salah satu tradisi paling ikonik dari budaya Manggarai yang masih dilakukan turun-menurun.',

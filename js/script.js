@@ -340,7 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Golo Depet', image: 'media/img/golodepet.jpg', description: 'Saksikan pemandangan matahari terbit atau terbenam yang spektakuler dari puncak bukit Golo Depet.' },
         { name: 'Air Terjun', image: 'media/img/airterjun.jpeg', description: 'Segarkan diri dengan bermain air di bawah gemuruh air terjun yang jernih dan alami.' },
         { name: 'Tarian Caci', image: 'media/img/tarian2.png', description: 'Saksikan tarian perang tradisional NTT yang penuh makna budaya, dilakukan selama upacarasyukuran panen dan ritual adat besar lainnya.' },
-        { name: 'Tari Danding', image: 'media/img/taridanding2.webp', description: 'Tarian tradisional dari Manggarai, NTT yang ditampilkan sebagai ritual rasa syukur atas hasil panen yang melimpah.' },
+        { name: 'Tari Danding', image: 'media/img/penti4.jpg', description: 'Tarian tradisional dari Manggarai, NTT yang ditampilkan sebagai ritual rasa syukur atas hasil panen yang melimpah.' },
         { name: 'Ritual Penti', image: 'media/img/penti2.jpg', description: 'Ikuti upacara adat Penti, sebuah ritual syukur atas hasil panen yang kaya akan nilai-nilai budaya lokal.' },
         { name: 'Menganyam Tikar', image: 'media/img/tikar3.jpg', description: 'Belajar seni menganyam tikar dari para pengrajin lokal. Setiap proses diajari dan diberi arahan jelas.' },
         { name: 'Membuat Tuak', image: 'media/img/tuak.jpeg', description: 'Lihat langsung proses pembuatan tuak, minuman tradisional dari fermentasi nira aren, dan cicipi rasanya yang khas.' },
