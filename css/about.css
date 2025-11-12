@@ -38,7 +38,7 @@
     max-width: 40%;
 }
 
-.about-video video {
+.about-video img {
     width: 100%;
     height: auto;
     border-radius: 12px;
@@ -64,7 +64,7 @@
         max-width: 80%;
     }
 
-    .about-video video {
+    .about-video img {
         height: auto;
     }
 }
